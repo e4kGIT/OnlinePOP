@@ -1,0 +1,1424 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DAL_DataContext" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="DataContext" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tblcore_attributes" EntityType="DAL_DataContext.tblcore_attributes" />
+    <EntitySet Name="tblcore_entities" EntityType="DAL_DataContext.tblcore_entities" />
+    <EntitySet Name="tblcore_types" EntityType="DAL_DataContext.tblcore_types" />
+    <EntitySet Name="tbleav_entities" EntityType="DAL_DataContext.tbleav_entities" />
+    <EntitySet Name="tbleav_entity_attribute" EntityType="DAL_DataContext.tbleav_entity_attribute" />
+    <EntitySet Name="tbleav_entity_entitytypes" EntityType="DAL_DataContext.tbleav_entity_entitytypes" />
+    <EntitySet Name="tblpop_order_detail" EntityType="DAL_DataContext.tblpop_order_detail" />
+    <AssociationSet Name="tbleav_entity_attribute_ibfk_2" Association="DAL_DataContext.tbleav_entity_attribute_ibfk_2">
+      <End Role="tblcore_attributes" EntitySet="tblcore_attributes" />
+      <End Role="tbleav_entity_attribute" EntitySet="tbleav_entity_attribute" />
+    </AssociationSet>
+    <AssociationSet Name="tblcore_types_ibfk_1" Association="DAL_DataContext.tblcore_types_ibfk_1">
+      <End Role="tblcore_entities" EntitySet="tblcore_entities" />
+      <End Role="tblcore_types" EntitySet="tblcore_types" />
+    </AssociationSet>
+    <AssociationSet Name="tbleav_entity_entitytypes_ibfk_2" Association="DAL_DataContext.tbleav_entity_entitytypes_ibfk_2">
+      <End Role="tblcore_types" EntitySet="tblcore_types" />
+      <End Role="tbleav_entity_entitytypes" EntitySet="tbleav_entity_entitytypes" />
+    </AssociationSet>
+    <AssociationSet Name="tbleav_entity_attribute_ibfk_1" Association="DAL_DataContext.tbleav_entity_attribute_ibfk_1">
+      <End Role="tbleav_entities" EntitySet="tbleav_entities" />
+      <End Role="tbleav_entity_attribute" EntitySet="tbleav_entity_attribute" />
+    </AssociationSet>
+    <AssociationSet Name="tbleav_entity_entitytypes_ibfk_1" Association="DAL_DataContext.tbleav_entity_entitytypes_ibfk_1">
+      <End Role="tbleav_entities" EntitySet="tbleav_entities" />
+      <End Role="tbleav_entity_entitytypes" EntitySet="tbleav_entity_entitytypes" />
+    </AssociationSet>
+    <EntitySet Name="tblbus_address" EntityType="DAL_DataContext.tblbus_address" />
+    <EntitySet Name="tblbus_business" EntityType="DAL_DataContext.tblbus_business" />
+    <EntitySet Name="tblcore_entity_types" EntityType="DAL_DataContext.tblcore_entity_types" />
+    <EntitySet Name="tblcustom_entity" EntityType="DAL_DataContext.tblcustom_entity" />
+    <EntitySet Name="tbleav_custom_entities" EntityType="DAL_DataContext.tbleav_custom_entities" />
+    <EntitySet Name="tbleav_entity_attribute_custom" EntityType="DAL_DataContext.tbleav_entity_attribute_custom" />
+    <EntitySet Name="tblfsk_style" EntityType="DAL_DataContext.tblfsk_style" />
+    <EntitySet Name="tblfsk_style_sizes" EntityType="DAL_DataContext.tblfsk_style_sizes" />
+    <EntitySet Name="tblfsk_style_suppliers" EntityType="DAL_DataContext.tblfsk_style_suppliers" />
+    <EntitySet Name="tblonline_user_map" EntityType="DAL_DataContext.tblonline_user_map" />
+    <AssociationSet Name="tblcustom_entity_ibfk_2" Association="DAL_DataContext.tblcustom_entity_ibfk_2">
+      <End Role="tblbus_business" EntitySet="tblbus_business" />
+      <End Role="tblcustom_entity" EntitySet="tblcustom_entity" />
+    </AssociationSet>
+    <AssociationSet Name="tblfsk_style_suppliers_ibfk_1" Association="DAL_DataContext.tblfsk_style_suppliers_ibfk_1">
+      <End Role="tblbus_business" EntitySet="tblbus_business" />
+      <End Role="tblfsk_style_suppliers" EntitySet="tblfsk_style_suppliers" />
+    </AssociationSet>
+    <AssociationSet Name="tbleav_entity_attribute_custom_ibfk_2" Association="DAL_DataContext.tbleav_entity_attribute_custom_ibfk_2">
+      <End Role="tblcore_attributes" EntitySet="tblcore_attributes" />
+      <End Role="tbleav_entity_attribute_custom" EntitySet="tbleav_entity_attribute_custom" />
+    </AssociationSet>
+    <AssociationSet Name="tblcore_entity_types_ibfk_1" Association="DAL_DataContext.tblcore_entity_types_ibfk_1">
+      <End Role="tblcore_entities" EntitySet="tblcore_entities" />
+      <End Role="tblcore_entity_types" EntitySet="tblcore_entity_types" />
+    </AssociationSet>
+    <AssociationSet Name="tblcustom_entity_ibfk_1" Association="DAL_DataContext.tblcustom_entity_ibfk_1">
+      <End Role="tblcore_entities" EntitySet="tblcore_entities" />
+      <End Role="tblcustom_entity" EntitySet="tblcustom_entity" />
+    </AssociationSet>
+    <AssociationSet Name="tblcore_entity_types_ibfk_2" Association="DAL_DataContext.tblcore_entity_types_ibfk_2">
+      <End Role="tblcore_types" EntitySet="tblcore_types" />
+      <End Role="tblcore_entity_types" EntitySet="tblcore_entity_types" />
+    </AssociationSet>
+    <AssociationSet Name="tbleav_custom_entities_ibfk_1" Association="DAL_DataContext.tbleav_custom_entities_ibfk_1">
+      <End Role="tblcustom_entity" EntitySet="tblcustom_entity" />
+      <End Role="tbleav_custom_entities" EntitySet="tbleav_custom_entities" />
+    </AssociationSet>
+    <AssociationSet Name="tblonline_user_map_ibfk_1" Association="DAL_DataContext.tblonline_user_map_ibfk_1">
+      <End Role="tblcustom_entity" EntitySet="tblcustom_entity" />
+      <End Role="tblonline_user_map" EntitySet="tblonline_user_map" />
+    </AssociationSet>
+    <AssociationSet Name="tbleav_entity_attribute_custom_ibfk_1" Association="DAL_DataContext.tbleav_entity_attribute_custom_ibfk_1">
+      <End Role="tbleav_custom_entities" EntitySet="tbleav_custom_entities" />
+      <End Role="tbleav_entity_attribute_custom" EntitySet="tbleav_entity_attribute_custom" />
+    </AssociationSet>
+    <EntitySet Name="tblbus_setvalues" EntityType="DAL_DataContext.tblbus_setvalues" />
+    <AssociationSet Name="tbleav_entities_ibfk_1" Association="DAL_DataContext.tbleav_entities_ibfk_1">
+      <End Role="tblcore_entities" EntitySet="tblcore_entities" />
+      <End Role="tbleav_entities" EntitySet="tbleav_entities" />
+    </AssociationSet>
+    <EntitySet Name="tblcustommenus" EntityType="DAL_DataContext.tblcustommenu" />
+    <EntitySet Name="tblmainmenus" EntityType="DAL_DataContext.tblmainmenu" />
+    <EntitySet Name="tblsubmenus" EntityType="DAL_DataContext.tblsubmenu" />
+    <AssociationSet Name="tblcustommenu_ibfk_2" Association="DAL_DataContext.tblcustommenu_ibfk_2">
+      <End Role="tblcustom_entity" EntitySet="tblcustom_entity" />
+      <End Role="tblcustommenu" EntitySet="tblcustommenus" />
+    </AssociationSet>
+    <AssociationSet Name="tblcustommenu_ibfk_1" Association="DAL_DataContext.tblcustommenu_ibfk_1">
+      <End Role="tblmainmenu" EntitySet="tblmainmenus" />
+      <End Role="tblcustommenu" EntitySet="tblcustommenus" />
+    </AssociationSet>
+    <AssociationSet Name="tblsubmenu_ibfk_1" Association="DAL_DataContext.tblsubmenu_ibfk_1">
+      <End Role="tblmainmenu" EntitySet="tblmainmenus" />
+      <End Role="tblsubmenu" EntitySet="tblsubmenus" />
+    </AssociationSet>
+    <EntitySet Name="aspnetroles" EntityType="DAL_DataContext.aspnetrole" />
+    <EntitySet Name="aspnetusers" EntityType="DAL_DataContext.aspnetuser" />
+    <AssociationSet Name="aspnetuserroles" Association="DAL_DataContext.aspnetuserroles">
+      <End Role="aspnetuser" EntitySet="aspnetusers" />
+      <End Role="aspnetrole" EntitySet="aspnetroles" />
+    </AssociationSet>
+    <EntitySet Name="tbleav_entity_attribute_value_datetime" EntityType="DAL_DataContext.tbleav_entity_attribute_value_datetime" />
+    <EntitySet Name="tbleav_entity_attribute_value_decimal" EntityType="DAL_DataContext.tbleav_entity_attribute_value_decimal" />
+    <EntitySet Name="tbleav_entity_attribute_value_int" EntityType="DAL_DataContext.tbleav_entity_attribute_value_int" />
+    <EntitySet Name="tbleav_entity_attribute_value_ref" EntityType="DAL_DataContext.tbleav_entity_attribute_value_ref" />
+    <EntitySet Name="tbleav_entity_attribute_value_varchar" EntityType="DAL_DataContext.tbleav_entity_attribute_value_varchar" />
+    <AssociationSet Name="tbleav_entity_attribute_value_datetime_ibfk_1" Association="DAL_DataContext.tbleav_entity_attribute_value_datetime_ibfk_1">
+      <End Role="tbleav_entity_attribute_custom" EntitySet="tbleav_entity_attribute_custom" />
+      <End Role="tbleav_entity_attribute_value_datetime" EntitySet="tbleav_entity_attribute_value_datetime" />
+    </AssociationSet>
+    <AssociationSet Name="tbleav_entity_attribute_value_decimal_ibfk_1" Association="DAL_DataContext.tbleav_entity_attribute_value_decimal_ibfk_1">
+      <End Role="tbleav_entity_attribute_custom" EntitySet="tbleav_entity_attribute_custom" />
+      <End Role="tbleav_entity_attribute_value_decimal" EntitySet="tbleav_entity_attribute_value_decimal" />
+    </AssociationSet>
+    <AssociationSet Name="tbleav_entity_attribute_value_int_ibfk_1" Association="DAL_DataContext.tbleav_entity_attribute_value_int_ibfk_1">
+      <End Role="tbleav_entity_attribute_custom" EntitySet="tbleav_entity_attribute_custom" />
+      <End Role="tbleav_entity_attribute_value_int" EntitySet="tbleav_entity_attribute_value_int" />
+    </AssociationSet>
+    <AssociationSet Name="tbleav_entity_attribute_value_varchar_ibfk_1" Association="DAL_DataContext.tbleav_entity_attribute_value_varchar_ibfk_1">
+      <End Role="tbleav_entity_attribute_custom" EntitySet="tbleav_entity_attribute_custom" />
+      <End Role="tbleav_entity_attribute_value_varchar" EntitySet="tbleav_entity_attribute_value_varchar" />
+    </AssociationSet>
+    <AssociationSet Name="tbleav_entity_attribute_value_datetime_ibfk_2" Association="DAL_DataContext.tbleav_entity_attribute_value_datetime_ibfk_2">
+      <End Role="tbleav_entity_attribute_value_ref" EntitySet="tbleav_entity_attribute_value_ref" />
+      <End Role="tbleav_entity_attribute_value_datetime" EntitySet="tbleav_entity_attribute_value_datetime" />
+    </AssociationSet>
+    <AssociationSet Name="tbleav_entity_attribute_value_decimal_ibfk_2" Association="DAL_DataContext.tbleav_entity_attribute_value_decimal_ibfk_2">
+      <End Role="tbleav_entity_attribute_value_ref" EntitySet="tbleav_entity_attribute_value_ref" />
+      <End Role="tbleav_entity_attribute_value_decimal" EntitySet="tbleav_entity_attribute_value_decimal" />
+    </AssociationSet>
+    <AssociationSet Name="tbleav_entity_attribute_value_int_ibfk_2" Association="DAL_DataContext.tbleav_entity_attribute_value_int_ibfk_2">
+      <End Role="tbleav_entity_attribute_value_ref" EntitySet="tbleav_entity_attribute_value_ref" />
+      <End Role="tbleav_entity_attribute_value_int" EntitySet="tbleav_entity_attribute_value_int" />
+    </AssociationSet>
+    <AssociationSet Name="tbleav_entity_attribute_value_varchar_ibfk_2" Association="DAL_DataContext.tbleav_entity_attribute_value_varchar_ibfk_2">
+      <End Role="tbleav_entity_attribute_value_ref" EntitySet="tbleav_entity_attribute_value_ref" />
+      <End Role="tbleav_entity_attribute_value_varchar" EntitySet="tbleav_entity_attribute_value_varchar" />
+    </AssociationSet>
+    <EntitySet Name="tbleav_entity_attribute_value_bool" EntityType="DAL_DataContext.tbleav_entity_attribute_value_bool" />
+    <AssociationSet Name="tbleav_entity_attribute_value_bool_ibfk_2" Association="DAL_DataContext.tbleav_entity_attribute_value_bool_ibfk_2">
+      <End Role="tbleav_entity_attribute_custom" EntitySet="tbleav_entity_attribute_custom" />
+      <End Role="tbleav_entity_attribute_value_bool" EntitySet="tbleav_entity_attribute_value_bool" />
+    </AssociationSet>
+    <AssociationSet Name="tbleav_entity_attribute_value_bool_ibfk_1" Association="DAL_DataContext.tbleav_entity_attribute_value_bool_ibfk_1">
+      <End Role="tbleav_entity_attribute_value_ref" EntitySet="tbleav_entity_attribute_value_ref" />
+      <End Role="tbleav_entity_attribute_value_bool" EntitySet="tbleav_entity_attribute_value_bool" />
+    </AssociationSet>
+    <EntitySet Name="tbleav_entity_attribute_value_orderdetail_ref" EntityType="DAL_DataContext.tbleav_entity_attribute_value_orderdetail_ref" />
+    <EntitySet Name="tbleav_entity_attribute_value_orderheader_ref" EntityType="DAL_DataContext.tbleav_entity_attribute_value_orderheader_ref" />
+    <EntitySet Name="tbleav_entity_completed_orderdetail" EntityType="DAL_DataContext.tbleav_entity_completed_orderdetail" />
+    <EntitySet Name="tbleav_entity_completed_orderheader" EntityType="DAL_DataContext.tbleav_entity_completed_orderheader" />
+    <AssociationSet Name="tbleav_entity_completed_orderdetail_ibfk_1" Association="DAL_DataContext.tbleav_entity_completed_orderdetail_ibfk_1">
+      <End Role="tbleav_custom_entities" EntitySet="tbleav_custom_entities" />
+      <End Role="tbleav_entity_completed_orderdetail" EntitySet="tbleav_entity_completed_orderdetail" />
+    </AssociationSet>
+    <AssociationSet Name="tbleav_entity_completed_orderheader_ibfk_1" Association="DAL_DataContext.tbleav_entity_completed_orderheader_ibfk_1">
+      <End Role="tbleav_custom_entities" EntitySet="tbleav_custom_entities" />
+      <End Role="tbleav_entity_completed_orderheader" EntitySet="tbleav_entity_completed_orderheader" />
+    </AssociationSet>
+    <AssociationSet Name="tbleav_entity_attribute_value_orderdetail_ref_ibfk_1" Association="DAL_DataContext.tbleav_entity_attribute_value_orderdetail_ref_ibfk_1">
+      <End Role="tbleav_entity_attribute_value_ref" EntitySet="tbleav_entity_attribute_value_ref" />
+      <End Role="tbleav_entity_attribute_value_orderdetail_ref" EntitySet="tbleav_entity_attribute_value_orderdetail_ref" />
+    </AssociationSet>
+    <AssociationSet Name="tbleav_entity_attribute_value_orderheader_ref_ibfk_1" Association="DAL_DataContext.tbleav_entity_attribute_value_orderheader_ref_ibfk_1">
+      <End Role="tbleav_entity_attribute_value_ref" EntitySet="tbleav_entity_attribute_value_ref" />
+      <End Role="tbleav_entity_attribute_value_orderheader_ref" EntitySet="tbleav_entity_attribute_value_orderheader_ref" />
+    </AssociationSet>
+    <AssociationSet Name="tblpop_order_detailtbleav_entity_attribute_value_orderdetail_ref" Association="DAL_DataContext.tblpop_order_detailtbleav_entity_attribute_value_orderdetail_ref">
+      <End Role="tblpop_order_detail" EntitySet="tblpop_order_detail" />
+      <End Role="tbleav_entity_attribute_value_orderdetail_ref" EntitySet="tbleav_entity_attribute_value_orderdetail_ref" />
+    </AssociationSet>
+    <AssociationSet Name="tblpop_order_detailtbleav_entity_completed_orderdetail" Association="DAL_DataContext.tblpop_order_detailtbleav_entity_completed_orderdetail">
+      <End Role="tblpop_order_detail" EntitySet="tblpop_order_detail" />
+      <End Role="tbleav_entity_completed_orderdetail" EntitySet="tbleav_entity_completed_orderdetail" />
+    </AssociationSet>
+    <AssociationSet Name="tbleav_entity_attribute_value_ref_ibfk_1" Association="DAL_DataContext.tbleav_entity_attribute_value_ref_ibfk_1">
+      <End Role="tbleav_custom_entities" EntitySet="tbleav_custom_entities" />
+      <End Role="tbleav_entity_attribute_value_ref" EntitySet="tbleav_entity_attribute_value_ref" />
+    </AssociationSet>
+    <EntitySet Name="tbldataannotations_custom" EntityType="DAL_DataContext.tbldataannotations_custom" />
+    <EntitySet Name="tbldataannotations_master" EntityType="DAL_DataContext.tbldataannotations_master" />
+    <EntitySet Name="tblpop_despatchnote" EntityType="DAL_DataContext.tblpop_despatchnote" />
+    <AssociationSet Name="tbldataannotations_custom_ibfk_2" Association="DAL_DataContext.tbldataannotations_custom_ibfk_2">
+      <End Role="tblcustom_entity" EntitySet="tblcustom_entity" />
+      <End Role="tbldataannotations_custom" EntitySet="tbldataannotations_custom" />
+    </AssociationSet>
+    <AssociationSet Name="tbldataannotations_custom_ibfk_1" Association="DAL_DataContext.tbldataannotations_custom_ibfk_1">
+      <End Role="tbldataannotations_master" EntitySet="tbldataannotations_master" />
+      <End Role="tbldataannotations_custom" EntitySet="tbldataannotations_custom" />
+    </AssociationSet>
+    <EntitySet Name="tblpop_order_header" EntityType="DAL_DataContext.tblpop_order_header" />
+    <AssociationSet Name="tblpop_order_headertblpop_order_detail" Association="DAL_DataContext.tblpop_order_headertblpop_order_detail">
+      <End Role="tblpop_order_header" EntitySet="tblpop_order_header" />
+      <End Role="tblpop_order_detail" EntitySet="tblpop_order_detail" />
+    </AssociationSet>
+    <AssociationSet Name="tblpop_order_headertbleav_entity_completed_orderheader" Association="DAL_DataContext.tblpop_order_headertbleav_entity_completed_orderheader">
+      <End Role="tblpop_order_header" EntitySet="tblpop_order_header" />
+      <End Role="tbleav_entity_completed_orderheader" EntitySet="tbleav_entity_completed_orderheader" />
+    </AssociationSet>
+    <AssociationSet Name="tblpop_order_headertbleav_entity_attribute_value_orderheader_ref" Association="DAL_DataContext.tblpop_order_headertbleav_entity_attribute_value_orderheader_ref">
+      <End Role="tblpop_order_header" EntitySet="tblpop_order_header" />
+      <End Role="tbleav_entity_attribute_value_orderheader_ref" EntitySet="tbleav_entity_attribute_value_orderheader_ref" />
+    </AssociationSet>
+    <AssociationSet Name="tbldataannotations_custom_ibfk_11" Association="DAL_DataContext.tbldataannotations_custom_ibfk_11">
+      <End Role="tbldataannotations_master" EntitySet="tbldataannotations_master" />
+      <End Role="tbldataannotations_custom" EntitySet="tbldataannotations_custom" />
+    </AssociationSet>
+    <AssociationSet Name="tblpop_order_header_ibfk_1" Association="DAL_DataContext.tblpop_order_header_ibfk_1">
+      <End Role="tblbus_business" EntitySet="tblbus_business" />
+      <End Role="tblpop_order_header" EntitySet="tblpop_order_header" />
+    </AssociationSet>
+    <EntitySet Name="tbleav_email_log" EntityType="DAL_DataContext.tbleav_email_log" />
+    <EntitySet Name="tblpop_order_color" EntityType="DAL_DataContext.tblpop_order_color" />
+    <EntitySet Name="tblpop_order_make" EntityType="DAL_DataContext.tblpop_order_make" />
+    <EntitySet Name="tblpop_order_model" EntityType="DAL_DataContext.tblpop_order_model" />
+    <AssociationSet Name="tblpop_order_model_ibfk_1" Association="DAL_DataContext.tblpop_order_model_ibfk_1">
+      <End Role="tblpop_order_make" EntitySet="tblpop_order_make" />
+      <End Role="tblpop_order_model" EntitySet="tblpop_order_model" />
+    </AssociationSet>
+    <EntitySet Name="tbleav_entity_attribute_value" EntityType="DAL_DataContext.tbleav_entity_attribute_value" />
+  </EntityContainer>
+  <EntityType Name="tblcore_attributes">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Attribute" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="AttributeTypeBackend" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ControlTypeFrontend" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="FieldTypeLookup" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="tbleav_entity_attribute" Relationship="DAL_DataContext.tbleav_entity_attribute_ibfk_2" FromRole="tblcore_attributes" ToRole="tbleav_entity_attribute" />
+    <NavigationProperty Name="tbleav_entity_attribute_custom" Relationship="DAL_DataContext.tbleav_entity_attribute_custom_ibfk_2" FromRole="tblcore_attributes" ToRole="tbleav_entity_attribute_custom" />
+  </EntityType>
+  <EntityType Name="tblcore_entities">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="description" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Notification" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="tblcore_types" Relationship="DAL_DataContext.tblcore_types_ibfk_1" FromRole="tblcore_entities" ToRole="tblcore_types" />
+    <Property Name="IsEnable" Type="Boolean" />
+    <NavigationProperty Name="tblcore_entity_types" Relationship="DAL_DataContext.tblcore_entity_types_ibfk_1" FromRole="tblcore_entities" ToRole="tblcore_entity_types" />
+    <NavigationProperty Name="tblcustom_entity" Relationship="DAL_DataContext.tblcustom_entity_ibfk_1" FromRole="tblcore_entities" ToRole="tblcustom_entity" />
+    <NavigationProperty Name="tbleav_entities" Relationship="DAL_DataContext.tbleav_entities_ibfk_1" FromRole="tblcore_entities" ToRole="tbleav_entities" />
+  </EntityType>
+  <EntityType Name="tblcore_types">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="entity_id" Type="Int32" />
+    <Property Name="description" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Notification" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="tblcore_entities" Relationship="DAL_DataContext.tblcore_types_ibfk_1" FromRole="tblcore_types" ToRole="tblcore_entities" />
+    <NavigationProperty Name="tbleav_entity_entitytypes" Relationship="DAL_DataContext.tbleav_entity_entitytypes_ibfk_2" FromRole="tblcore_types" ToRole="tbleav_entity_entitytypes" />
+    <Property Name="IsEnable" Type="Boolean" />
+    <NavigationProperty Name="tblcore_entity_types" Relationship="DAL_DataContext.tblcore_entity_types_ibfk_2" FromRole="tblcore_types" ToRole="tblcore_entity_types" />
+  </EntityType>
+  <EntityType Name="tbleav_entities">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="description" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="SeqNo" Type="Int32" />
+    <NavigationProperty Name="tbleav_entity_attribute" Relationship="DAL_DataContext.tbleav_entity_attribute_ibfk_1" FromRole="tbleav_entities" ToRole="tbleav_entity_attribute" />
+    <NavigationProperty Name="tbleav_entity_entitytypes" Relationship="DAL_DataContext.tbleav_entity_entitytypes_ibfk_1" FromRole="tbleav_entities" ToRole="tbleav_entity_entitytypes" />
+    <Property Name="coreentity_id" Type="Int32" />
+    <NavigationProperty Name="tblcore_entities" Relationship="DAL_DataContext.tbleav_entities_ibfk_1" FromRole="tbleav_entities" ToRole="tblcore_entities" />
+    <Property Name="IsmailReq" Type="Boolean" Nullable="false" />
+    <Property Name="IsHeader" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="tbleav_entity_attribute">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="entity_id" Type="Int32" />
+    <Property Name="attribute_id" Type="Int32" />
+    <Property Name="entity_attribute_value" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="tblcore_attributes" Relationship="DAL_DataContext.tbleav_entity_attribute_ibfk_2" FromRole="tbleav_entity_attribute" ToRole="tblcore_attributes" />
+    <NavigationProperty Name="tbleav_entities" Relationship="DAL_DataContext.tbleav_entity_attribute_ibfk_1" FromRole="tbleav_entity_attribute" ToRole="tbleav_entities" />
+  </EntityType>
+  <EntityType Name="tbleav_entity_entitytypes">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="eav_entity_id" Type="Int32" />
+    <Property Name="type_id" Type="Int32" />
+    <NavigationProperty Name="tblcore_types" Relationship="DAL_DataContext.tbleav_entity_entitytypes_ibfk_2" FromRole="tbleav_entity_entitytypes" ToRole="tblcore_types" />
+    <NavigationProperty Name="tbleav_entities" Relationship="DAL_DataContext.tbleav_entity_entitytypes_ibfk_1" FromRole="tbleav_entity_entitytypes" ToRole="tbleav_entities" />
+  </EntityType>
+  <EntityType Name="tblpop_order_detail">
+    <Key>
+      <PropertyRef Name="CompanyId" />
+      <PropertyRef Name="WareHouseId" />
+      <PropertyRef Name="OrderNo" />
+      <PropertyRef Name="LineNo" />
+    </Key>
+    <Property Name="CompanyId" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="WareHouseId" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="OrderNo" Type="Int32" Nullable="false" />
+    <Property Name="LineNo" Type="Int32" Nullable="false" />
+    <Property Name="LineType" Type="Int16" />
+    <Property Name="StyleID" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="ColourID" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="SizeID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="UnitOfIssue" Type="Int32" />
+    <Property Name="TypeOfIssue" Type="Int32" />
+    <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Price" Type="Decimal" />
+    <Property Name="OrdQty" Type="Int32" />
+    <Property Name="AllQty" Type="Int32" />
+    <Property Name="InvQty" Type="Int32" />
+    <Property Name="DespQty" Type="Int32" />
+    <Property Name="CommissionRate" Type="Decimal" />
+    <Property Name="Discount" Type="Int32" />
+    <Property Name="VatCode" Type="Int16" />
+    <Property Name="NomCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Currency_Exchange_Rate" Type="Int32" />
+    <Property Name="SalesOrderNo" Type="Int32" />
+    <Property Name="SOLineNo" Type="Int32" />
+    <Property Name="DueDate" Type="DateTime" />
+    <Property Name="FreeTextType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FreeText" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+    <Property Name="OutStandingQty" Type="Int32" />
+    <Property Name="IssueUOM" Type="Int32" />
+    <Property Name="IssueQty" Type="Int32" />
+    <Property Name="StockingUOM" Type="Int32" />
+    <Property Name="OriginalLineNo" Type="Int32" />
+    <Property Name="JobSheetNo" Type="Int32" />
+    <Property Name="JobSheetLineNo" Type="Int32" />
+    <Property Name="AssemblyID" Type="Int32" />
+    <Property Name="AsmLineNo" Type="Int32" />
+    <NavigationProperty Name="tbleav_entity_attribute_value_orderdetail_ref" Relationship="DAL_DataContext.tblpop_order_detailtbleav_entity_attribute_value_orderdetail_ref" FromRole="tblpop_order_detail" ToRole="tbleav_entity_attribute_value_orderdetail_ref" />
+    <NavigationProperty Name="tbleav_entity_completed_orderdetail" Relationship="DAL_DataContext.tblpop_order_detailtbleav_entity_completed_orderdetail" FromRole="tblpop_order_detail" ToRole="tbleav_entity_completed_orderdetail" />
+    <NavigationProperty Name="tblpop_order_header" Relationship="DAL_DataContext.tblpop_order_headertblpop_order_detail" FromRole="tblpop_order_detail" ToRole="tblpop_order_header" />
+  </EntityType>
+  <Association Name="tbleav_entity_attribute_ibfk_2">
+    <End Type="DAL_DataContext.tblcore_attributes" Role="tblcore_attributes" Multiplicity="0..1" />
+    <End Type="DAL_DataContext.tbleav_entity_attribute" Role="tbleav_entity_attribute" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblcore_attributes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tbleav_entity_attribute">
+        <PropertyRef Name="attribute_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="tblcore_types_ibfk_1">
+    <End Type="DAL_DataContext.tblcore_entities" Role="tblcore_entities" Multiplicity="0..1" />
+    <End Type="DAL_DataContext.tblcore_types" Role="tblcore_types" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblcore_entities">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tblcore_types">
+        <PropertyRef Name="entity_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="tbleav_entity_entitytypes_ibfk_2">
+    <End Type="DAL_DataContext.tblcore_types" Role="tblcore_types" Multiplicity="0..1" />
+    <End Type="DAL_DataContext.tbleav_entity_entitytypes" Role="tbleav_entity_entitytypes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblcore_types">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tbleav_entity_entitytypes">
+        <PropertyRef Name="type_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="tbleav_entity_attribute_ibfk_1">
+    <End Type="DAL_DataContext.tbleav_entities" Role="tbleav_entities" Multiplicity="0..1" />
+    <End Type="DAL_DataContext.tbleav_entity_attribute" Role="tbleav_entity_attribute" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbleav_entities">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tbleav_entity_attribute">
+        <PropertyRef Name="entity_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="tbleav_entity_entitytypes_ibfk_1">
+    <End Type="DAL_DataContext.tbleav_entities" Role="tbleav_entities" Multiplicity="0..1" />
+    <End Type="DAL_DataContext.tbleav_entity_entitytypes" Role="tbleav_entity_entitytypes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbleav_entities">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tbleav_entity_entitytypes">
+        <PropertyRef Name="eav_entity_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="tblbus_address">
+    <Key>
+      <PropertyRef Name="CompanyID" />
+      <PropertyRef Name="BusinessID" />
+      <PropertyRef Name="AddressID" />
+    </Key>
+    <Property Name="CompanyID" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="BusinessID" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="AddressID" Type="Int32" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Address1" Type="String" MaxLength="75" FixedLength="false" Unicode="false" />
+    <Property Name="Address2" Type="String" MaxLength="75" FixedLength="false" Unicode="false" />
+    <Property Name="Address3" Type="String" MaxLength="75" FixedLength="false" Unicode="false" />
+    <Property Name="Town" Type="String" MaxLength="75" FixedLength="false" Unicode="false" />
+    <Property Name="City" Type="String" MaxLength="75" FixedLength="false" Unicode="false" />
+    <Property Name="Postcode" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="CountryCode" Type="Int32" />
+    <Property Name="AddressTypeID" Type="Int32" />
+    <Property Name="ContactID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="tblbus_business">
+    <Key>
+      <PropertyRef Name="BusinessID" />
+    </Key>
+    <Property Name="CompanyID" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="BusinessID" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="BusType" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Country_Currency" Type="Int32" />
+    <Property Name="Live" Type="Boolean" Nullable="false" />
+    <Property Name="AnalysisCodeID" Type="Int32" />
+    <Property Name="Default_Nominal" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="Factoring_No" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="Comments" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+    <Property Name="GroupID" Type="Int32" />
+    <Property Name="CoupleID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="IsExtract" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="tblcustom_entity" Relationship="DAL_DataContext.tblcustom_entity_ibfk_2" FromRole="tblbus_business" ToRole="tblcustom_entity" />
+    <NavigationProperty Name="tblfsk_style_suppliers" Relationship="DAL_DataContext.tblfsk_style_suppliers_ibfk_1" FromRole="tblbus_business" ToRole="tblfsk_style_suppliers" />
+    <NavigationProperty Name="tblpop_order_header" Relationship="DAL_DataContext.tblpop_order_header_ibfk_1" FromRole="tblbus_business" ToRole="tblpop_order_header" />
+  </EntityType>
+  <EntityType Name="tblcore_entity_types">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="entity_id" Type="Int32" />
+    <Property Name="type_id" Type="Int32" />
+    <NavigationProperty Name="tblcore_entities" Relationship="DAL_DataContext.tblcore_entity_types_ibfk_1" FromRole="tblcore_entity_types" ToRole="tblcore_entities" />
+    <NavigationProperty Name="tblcore_types" Relationship="DAL_DataContext.tblcore_entity_types_ibfk_2" FromRole="tblcore_entity_types" ToRole="tblcore_types" />
+  </EntityType>
+  <EntityType Name="tblcustom_entity">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ReferenceID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="EntityID" Type="Int32" />
+    <NavigationProperty Name="tblbus_business" Relationship="DAL_DataContext.tblcustom_entity_ibfk_2" FromRole="tblcustom_entity" ToRole="tblbus_business" />
+    <NavigationProperty Name="tblcore_entities" Relationship="DAL_DataContext.tblcustom_entity_ibfk_1" FromRole="tblcustom_entity" ToRole="tblcore_entities" />
+    <NavigationProperty Name="tbleav_custom_entities" Relationship="DAL_DataContext.tbleav_custom_entities_ibfk_1" FromRole="tblcustom_entity" ToRole="tbleav_custom_entities" />
+    <NavigationProperty Name="tblonline_user_map" Relationship="DAL_DataContext.tblonline_user_map_ibfk_1" FromRole="tblcustom_entity" ToRole="tblonline_user_map" />
+    <NavigationProperty Name="tblcustommenus" Relationship="DAL_DataContext.tblcustommenu_ibfk_2" FromRole="tblcustom_entity" ToRole="tblcustommenu" />
+    <NavigationProperty Name="tbldataannotations_custom" Relationship="DAL_DataContext.tbldataannotations_custom_ibfk_2" FromRole="tblcustom_entity" ToRole="tbldataannotations_custom" />
+  </EntityType>
+  <EntityType Name="tbleav_custom_entities">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CustomEntityID" Type="Int32" />
+    <Property Name="description" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="SeqNo" Type="Int32" />
+    <NavigationProperty Name="tblcustom_entity" Relationship="DAL_DataContext.tbleav_custom_entities_ibfk_1" FromRole="tbleav_custom_entities" ToRole="tblcustom_entity" />
+    <NavigationProperty Name="tbleav_entity_attribute_custom" Relationship="DAL_DataContext.tbleav_entity_attribute_custom_ibfk_1" FromRole="tbleav_custom_entities" ToRole="tbleav_entity_attribute_custom" />
+    <Property Name="IsmailReq" Type="Boolean" DefaultValue="False" Nullable="false" />
+    <Property Name="IsHeader" Type="Boolean" DefaultValue="False" Nullable="false" />
+    <NavigationProperty Name="tbleav_entity_completed_orderdetail" Relationship="DAL_DataContext.tbleav_entity_completed_orderdetail_ibfk_1" FromRole="tbleav_custom_entities" ToRole="tbleav_entity_completed_orderdetail" />
+    <NavigationProperty Name="tbleav_entity_completed_orderheader" Relationship="DAL_DataContext.tbleav_entity_completed_orderheader_ibfk_1" FromRole="tbleav_custom_entities" ToRole="tbleav_entity_completed_orderheader" />
+    <NavigationProperty Name="tbleav_entity_attribute_value_ref" Relationship="DAL_DataContext.tbleav_entity_attribute_value_ref_ibfk_1" FromRole="tbleav_custom_entities" ToRole="tbleav_entity_attribute_value_ref" />
+    <Property Name="IsDespatchType" Type="Boolean" DefaultValue="False" Nullable="false" />
+    <Property Name="IsDocument" Type="Boolean" DefaultValue="False" />
+  </EntityType>
+  <EntityType Name="tbleav_entity_attribute_custom">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="entity_id" Type="Int32" />
+    <Property Name="attribute_id" Type="Int32" />
+    <Property Name="entity_attribute_value" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="tblcore_attributes" Relationship="DAL_DataContext.tbleav_entity_attribute_custom_ibfk_2" FromRole="tbleav_entity_attribute_custom" ToRole="tblcore_attributes" />
+    <NavigationProperty Name="tbleav_custom_entities" Relationship="DAL_DataContext.tbleav_entity_attribute_custom_ibfk_1" FromRole="tbleav_entity_attribute_custom" ToRole="tbleav_custom_entities" />
+    <Property Name="DisplayText" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="tbleav_entity_attribute_value_datetime" Relationship="DAL_DataContext.tbleav_entity_attribute_value_datetime_ibfk_1" FromRole="tbleav_entity_attribute_custom" ToRole="tbleav_entity_attribute_value_datetime" />
+    <NavigationProperty Name="tbleav_entity_attribute_value_decimal" Relationship="DAL_DataContext.tbleav_entity_attribute_value_decimal_ibfk_1" FromRole="tbleav_entity_attribute_custom" ToRole="tbleav_entity_attribute_value_decimal" />
+    <NavigationProperty Name="tbleav_entity_attribute_value_int" Relationship="DAL_DataContext.tbleav_entity_attribute_value_int_ibfk_1" FromRole="tbleav_entity_attribute_custom" ToRole="tbleav_entity_attribute_value_int" />
+    <NavigationProperty Name="tbleav_entity_attribute_value_varchar" Relationship="DAL_DataContext.tbleav_entity_attribute_value_varchar_ibfk_1" FromRole="tbleav_entity_attribute_custom" ToRole="tbleav_entity_attribute_value_varchar" />
+    <NavigationProperty Name="tbleav_entity_attribute_value_bool" Relationship="DAL_DataContext.tbleav_entity_attribute_value_bool_ibfk_2" FromRole="tbleav_entity_attribute_custom" ToRole="tbleav_entity_attribute_value_bool" />
+  </EntityType>
+  <EntityType Name="tblfsk_style">
+    <Key>
+      <PropertyRef Name="CompanyID" />
+      <PropertyRef Name="StyleID" />
+    </Key>
+    <Property Name="CompanyID" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="StyleID" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Content" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Bundle" Type="Int16" />
+    <Property Name="Product_Group" Type="Int32" />
+    <Property Name="Product_Group_Sub" Type="Int32" />
+    <Property Name="Weight" Type="Double" />
+    <Property Name="SupplimentaryUnits" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Issue_Type" Type="Int32" />
+    <Property Name="Issue_Units" Type="Int32" />
+    <Property Name="Picture" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Maxsize" Type="Int16" />
+    <Property Name="Maxcol" Type="Int16" />
+    <Property Name="Maxop" Type="Int16" />
+    <Property Name="Maxmat" Type="Int16" />
+    <Property Name="Overhead" Type="Double" />
+    <Property Name="Yield" Type="Double" />
+    <Property Name="Waste" Type="Double" />
+    <Property Name="Allowance" Type="Double" />
+    <Property Name="Nominal_Code" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="Commodity_Code" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Notes" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+    <Property Name="Season" Type="Int32" />
+    <Property Name="ClassID" Type="Int32" />
+    <Property Name="Obsolete_Class" Type="Int32" />
+    <Property Name="Live" Type="Boolean" Nullable="false" />
+    <Property Name="StyleImage" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="BatchControl" Type="Boolean" Nullable="false" />
+    <Property Name="StockingUOM" Type="Int32" />
+    <Property Name="IssueUOM" Type="Int32" />
+    <Property Name="StockingType" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="Country" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tblfsk_style_sizes">
+    <Key>
+      <PropertyRef Name="CompanyID" />
+      <PropertyRef Name="StyleID" />
+      <PropertyRef Name="SizeID" />
+      <PropertyRef Name="PriceOptionID" />
+    </Key>
+    <Property Name="CompanyID" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="StyleID" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="SizeID" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="SeqNo" Type="Int16" />
+    <Property Name="VATCode" Type="Int16" />
+    <Property Name="PriceOptionID" Type="Int32" Nullable="false" />
+    <Property Name="StockingType" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="IsStatic" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblfsk_style_suppliers">
+    <Key>
+      <PropertyRef Name="CompanyID" />
+      <PropertyRef Name="SupplierID" />
+      <PropertyRef Name="StyleID" />
+      <PropertyRef Name="SizeID" />
+    </Key>
+    <Property Name="CompanyID" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="SupplierID" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="StyleID" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="SupplierProd_code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Supplier_price" Type="Int32" />
+    <Property Name="SupplierSeq" Type="Int16" />
+    <Property Name="SizeID" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Leadtime" Type="Int32" />
+    <Property Name="WarehouseID" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="IsBulkOrder" Type="Int32" />
+    <NavigationProperty Name="tblbus_business" Relationship="DAL_DataContext.tblfsk_style_suppliers_ibfk_1" FromRole="tblfsk_style_suppliers" ToRole="tblbus_business" />
+  </EntityType>
+  <EntityType Name="tblonline_user_map">
+    <Key>
+      <PropertyRef Name="Username" />
+      <PropertyRef Name="CustomEntityID" />
+    </Key>
+    <Property Name="Username" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CustomEntityID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="tblcustom_entity" Relationship="DAL_DataContext.tblonline_user_map_ibfk_1" FromRole="tblonline_user_map" ToRole="tblcustom_entity" />
+  </EntityType>
+  <Association Name="tblcustom_entity_ibfk_2">
+    <End Type="DAL_DataContext.tblbus_business" Role="tblbus_business" Multiplicity="0..1" />
+    <End Type="DAL_DataContext.tblcustom_entity" Role="tblcustom_entity" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblbus_business">
+        <PropertyRef Name="BusinessID" />
+      </Principal>
+      <Dependent Role="tblcustom_entity">
+        <PropertyRef Name="ReferenceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="tblfsk_style_suppliers_ibfk_1">
+    <End Type="DAL_DataContext.tblbus_business" Role="tblbus_business" Multiplicity="1" />
+    <End Type="DAL_DataContext.tblfsk_style_suppliers" Role="tblfsk_style_suppliers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblbus_business">
+        <PropertyRef Name="BusinessID" />
+      </Principal>
+      <Dependent Role="tblfsk_style_suppliers">
+        <PropertyRef Name="SupplierID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="tbleav_entity_attribute_custom_ibfk_2">
+    <End Type="DAL_DataContext.tblcore_attributes" Role="tblcore_attributes" Multiplicity="0..1" />
+    <End Type="DAL_DataContext.tbleav_entity_attribute_custom" Role="tbleav_entity_attribute_custom" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblcore_attributes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tbleav_entity_attribute_custom">
+        <PropertyRef Name="attribute_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="tblcore_entity_types_ibfk_1">
+    <End Type="DAL_DataContext.tblcore_entities" Role="tblcore_entities" Multiplicity="0..1" />
+    <End Type="DAL_DataContext.tblcore_entity_types" Role="tblcore_entity_types" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblcore_entities">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tblcore_entity_types">
+        <PropertyRef Name="entity_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="tblcustom_entity_ibfk_1">
+    <End Type="DAL_DataContext.tblcore_entities" Role="tblcore_entities" Multiplicity="0..1" />
+    <End Type="DAL_DataContext.tblcustom_entity" Role="tblcustom_entity" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblcore_entities">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tblcustom_entity">
+        <PropertyRef Name="EntityID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="tblcore_entity_types_ibfk_2">
+    <End Type="DAL_DataContext.tblcore_types" Role="tblcore_types" Multiplicity="0..1" />
+    <End Type="DAL_DataContext.tblcore_entity_types" Role="tblcore_entity_types" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblcore_types">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tblcore_entity_types">
+        <PropertyRef Name="type_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="tbleav_custom_entities_ibfk_1">
+    <End Type="DAL_DataContext.tblcustom_entity" Role="tblcustom_entity" Multiplicity="0..1" />
+    <End Type="DAL_DataContext.tbleav_custom_entities" Role="tbleav_custom_entities" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblcustom_entity">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tbleav_custom_entities">
+        <PropertyRef Name="CustomEntityID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="tblonline_user_map_ibfk_1">
+    <End Type="DAL_DataContext.tblcustom_entity" Role="tblcustom_entity" Multiplicity="1" />
+    <End Type="DAL_DataContext.tblonline_user_map" Role="tblonline_user_map" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblcustom_entity">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tblonline_user_map">
+        <PropertyRef Name="CustomEntityID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="tbleav_entity_attribute_custom_ibfk_1">
+    <End Type="DAL_DataContext.tbleav_custom_entities" Role="tbleav_custom_entities" Multiplicity="0..1" />
+    <End Type="DAL_DataContext.tbleav_entity_attribute_custom" Role="tbleav_entity_attribute_custom" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbleav_custom_entities">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tbleav_entity_attribute_custom">
+        <PropertyRef Name="entity_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="tblbus_setvalues">
+    <Key>
+      <PropertyRef Name="CompanyID" />
+      <PropertyRef Name="BusinessID" />
+      <PropertyRef Name="SettingID" />
+    </Key>
+    <Property Name="CompanyID" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="BusinessID" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="SettingID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Value" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <Association Name="tbleav_entities_ibfk_1">
+    <End Type="DAL_DataContext.tblcore_entities" Role="tblcore_entities" Multiplicity="0..1" />
+    <End Type="DAL_DataContext.tbleav_entities" Role="tbleav_entities" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblcore_entities">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tbleav_entities">
+        <PropertyRef Name="coreentity_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="tblcustommenu">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MainID" Type="Int32" />
+    <Property Name="customEntityID" Type="Int32" />
+    <Property Name="Description" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="URL" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+    <Property Name="IsEnabled" Type="Boolean" />
+    <Property Name="ISLoginReq" Type="Boolean" />
+    <Property Name="SeqNo" Type="Int32" />
+    <NavigationProperty Name="tblcustom_entity" Relationship="DAL_DataContext.tblcustommenu_ibfk_2" FromRole="tblcustommenu" ToRole="tblcustom_entity" />
+    <NavigationProperty Name="tblmainmenu" Relationship="DAL_DataContext.tblcustommenu_ibfk_1" FromRole="tblcustommenu" ToRole="tblmainmenu" />
+  </EntityType>
+  <EntityType Name="tblmainmenu">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Description" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="URL" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+    <Property Name="IsEnabled" Type="Boolean" />
+    <Property Name="IsLoginReq" Type="Boolean" />
+    <Property Name="SeqNo" Type="Int32" />
+    <NavigationProperty Name="tblcustommenus" Relationship="DAL_DataContext.tblcustommenu_ibfk_1" FromRole="tblmainmenu" ToRole="tblcustommenu" />
+    <NavigationProperty Name="tblsubmenus" Relationship="DAL_DataContext.tblsubmenu_ibfk_1" FromRole="tblmainmenu" ToRole="tblsubmenu" />
+  </EntityType>
+  <EntityType Name="tblsubmenu">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MainID" Type="Int32" />
+    <Property Name="Description" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="URL" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+    <Property Name="IsEnabled" Type="Boolean" />
+    <Property Name="ISLoginReq" Type="Boolean" />
+    <Property Name="SeqNo" Type="Int32" />
+    <NavigationProperty Name="tblmainmenu" Relationship="DAL_DataContext.tblsubmenu_ibfk_1" FromRole="tblsubmenu" ToRole="tblmainmenu" />
+  </EntityType>
+  <Association Name="tblcustommenu_ibfk_2">
+    <End Type="DAL_DataContext.tblcustom_entity" Role="tblcustom_entity" Multiplicity="0..1" />
+    <End Type="DAL_DataContext.tblcustommenu" Role="tblcustommenu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblcustom_entity">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tblcustommenu">
+        <PropertyRef Name="customEntityID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="tblcustommenu_ibfk_1">
+    <End Type="DAL_DataContext.tblmainmenu" Role="tblmainmenu" Multiplicity="0..1" />
+    <End Type="DAL_DataContext.tblcustommenu" Role="tblcustommenu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblmainmenu">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tblcustommenu">
+        <PropertyRef Name="MainID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="tblsubmenu_ibfk_1">
+    <End Type="DAL_DataContext.tblmainmenu" Role="tblmainmenu" Multiplicity="0..1" />
+    <End Type="DAL_DataContext.tblsubmenu" Role="tblsubmenu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblmainmenu">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tblsubmenu">
+        <PropertyRef Name="MainID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="aspnetrole">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="aspnetusers" Relationship="DAL_DataContext.aspnetuserroles" FromRole="aspnetrole" ToRole="aspnetuser" />
+  </EntityType>
+  <EntityType Name="aspnetuser">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+    <Property Name="EmailConfirmed" Type="Boolean" Nullable="false" />
+    <Property Name="PasswordHash" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" />
+    <Property Name="SecurityStamp" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" />
+    <Property Name="PhoneNumberConfirmed" Type="Boolean" Nullable="false" />
+    <Property Name="TwoFactorEnabled" Type="Boolean" Nullable="false" />
+    <Property Name="LockoutEndDateUtc" Type="DateTime" />
+    <Property Name="LockoutEnabled" Type="Boolean" Nullable="false" />
+    <Property Name="AccessFailedCount" Type="Int32" Nullable="false" />
+    <Property Name="UserName" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="aspnetroles" Relationship="DAL_DataContext.aspnetuserroles" FromRole="aspnetuser" ToRole="aspnetrole" />
+  </EntityType>
+  <Association Name="aspnetuserroles">
+    <End Type="DAL_DataContext.aspnetuser" Role="aspnetuser" Multiplicity="*" />
+    <End Type="DAL_DataContext.aspnetrole" Role="aspnetrole" Multiplicity="*" />
+  </Association>
+  <EntityType Name="tbleav_entity_attribute_value_datetime">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RefID" Type="Int32" />
+    <Property Name="eav_entity_attribute_id" Type="Int32" />
+    <Property Name="Value" Type="DateTime" />
+    <NavigationProperty Name="tbleav_entity_attribute_custom" Relationship="DAL_DataContext.tbleav_entity_attribute_value_datetime_ibfk_1" FromRole="tbleav_entity_attribute_value_datetime" ToRole="tbleav_entity_attribute_custom" />
+    <NavigationProperty Name="tbleav_entity_attribute_value_ref" Relationship="DAL_DataContext.tbleav_entity_attribute_value_datetime_ibfk_2" FromRole="tbleav_entity_attribute_value_datetime" ToRole="tbleav_entity_attribute_value_ref" />
+  </EntityType>
+  <EntityType Name="tbleav_entity_attribute_value_decimal">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RefID" Type="Int32" />
+    <Property Name="eav_entity_attribute_id" Type="Int32" />
+    <Property Name="Value" Type="Decimal" />
+    <NavigationProperty Name="tbleav_entity_attribute_custom" Relationship="DAL_DataContext.tbleav_entity_attribute_value_decimal_ibfk_1" FromRole="tbleav_entity_attribute_value_decimal" ToRole="tbleav_entity_attribute_custom" />
+    <NavigationProperty Name="tbleav_entity_attribute_value_ref" Relationship="DAL_DataContext.tbleav_entity_attribute_value_decimal_ibfk_2" FromRole="tbleav_entity_attribute_value_decimal" ToRole="tbleav_entity_attribute_value_ref" />
+  </EntityType>
+  <EntityType Name="tbleav_entity_attribute_value_int">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RefID" Type="Int32" />
+    <Property Name="eav_entity_attribute_id" Type="Int32" />
+    <Property Name="Value" Type="Int32" />
+    <NavigationProperty Name="tbleav_entity_attribute_custom" Relationship="DAL_DataContext.tbleav_entity_attribute_value_int_ibfk_1" FromRole="tbleav_entity_attribute_value_int" ToRole="tbleav_entity_attribute_custom" />
+    <NavigationProperty Name="tbleav_entity_attribute_value_ref" Relationship="DAL_DataContext.tbleav_entity_attribute_value_int_ibfk_2" FromRole="tbleav_entity_attribute_value_int" ToRole="tbleav_entity_attribute_value_ref" />
+  </EntityType>
+  <EntityType Name="tbleav_entity_attribute_value_ref">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Date" Type="DateTime" />
+    <NavigationProperty Name="tbleav_entity_attribute_value_datetime" Relationship="DAL_DataContext.tbleav_entity_attribute_value_datetime_ibfk_2" FromRole="tbleav_entity_attribute_value_ref" ToRole="tbleav_entity_attribute_value_datetime" />
+    <NavigationProperty Name="tbleav_entity_attribute_value_decimal" Relationship="DAL_DataContext.tbleav_entity_attribute_value_decimal_ibfk_2" FromRole="tbleav_entity_attribute_value_ref" ToRole="tbleav_entity_attribute_value_decimal" />
+    <NavigationProperty Name="tbleav_entity_attribute_value_int" Relationship="DAL_DataContext.tbleav_entity_attribute_value_int_ibfk_2" FromRole="tbleav_entity_attribute_value_ref" ToRole="tbleav_entity_attribute_value_int" />
+    <NavigationProperty Name="tbleav_entity_attribute_value_varchar" Relationship="DAL_DataContext.tbleav_entity_attribute_value_varchar_ibfk_2" FromRole="tbleav_entity_attribute_value_ref" ToRole="tbleav_entity_attribute_value_varchar" />
+    <Property Name="Username" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="tbleav_entity_attribute_value_bool" Relationship="DAL_DataContext.tbleav_entity_attribute_value_bool_ibfk_1" FromRole="tbleav_entity_attribute_value_ref" ToRole="tbleav_entity_attribute_value_bool" />
+    <NavigationProperty Name="tbleav_entity_attribute_value_orderdetail_ref" Relationship="DAL_DataContext.tbleav_entity_attribute_value_orderdetail_ref_ibfk_1" FromRole="tbleav_entity_attribute_value_ref" ToRole="tbleav_entity_attribute_value_orderdetail_ref" />
+    <NavigationProperty Name="tbleav_entity_attribute_value_orderheader_ref" Relationship="DAL_DataContext.tbleav_entity_attribute_value_orderheader_ref_ibfk_1" FromRole="tbleav_entity_attribute_value_ref" ToRole="tbleav_entity_attribute_value_orderheader_ref" />
+    <Property Name="EntityID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="tbleav_custom_entities" Relationship="DAL_DataContext.tbleav_entity_attribute_value_ref_ibfk_1" FromRole="tbleav_entity_attribute_value_ref" ToRole="tbleav_custom_entities" />
+  </EntityType>
+  <EntityType Name="tbleav_entity_attribute_value_varchar">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RefID" Type="Int32" />
+    <Property Name="eav_entity_attribute_id" Type="Int32" />
+    <Property Name="Value" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="tbleav_entity_attribute_custom" Relationship="DAL_DataContext.tbleav_entity_attribute_value_varchar_ibfk_1" FromRole="tbleav_entity_attribute_value_varchar" ToRole="tbleav_entity_attribute_custom" />
+    <NavigationProperty Name="tbleav_entity_attribute_value_ref" Relationship="DAL_DataContext.tbleav_entity_attribute_value_varchar_ibfk_2" FromRole="tbleav_entity_attribute_value_varchar" ToRole="tbleav_entity_attribute_value_ref" />
+    <Property Name="IsDeleted" Type="Int32" />
+  </EntityType>
+  <Association Name="tbleav_entity_attribute_value_datetime_ibfk_1">
+    <End Type="DAL_DataContext.tbleav_entity_attribute_custom" Role="tbleav_entity_attribute_custom" Multiplicity="0..1" />
+    <End Type="DAL_DataContext.tbleav_entity_attribute_value_datetime" Role="tbleav_entity_attribute_value_datetime" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbleav_entity_attribute_custom">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tbleav_entity_attribute_value_datetime">
+        <PropertyRef Name="eav_entity_attribute_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="tbleav_entity_attribute_value_decimal_ibfk_1">
+    <End Type="DAL_DataContext.tbleav_entity_attribute_custom" Role="tbleav_entity_attribute_custom" Multiplicity="0..1" />
+    <End Type="DAL_DataContext.tbleav_entity_attribute_value_decimal" Role="tbleav_entity_attribute_value_decimal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbleav_entity_attribute_custom">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tbleav_entity_attribute_value_decimal">
+        <PropertyRef Name="eav_entity_attribute_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="tbleav_entity_attribute_value_int_ibfk_1">
+    <End Type="DAL_DataContext.tbleav_entity_attribute_custom" Role="tbleav_entity_attribute_custom" Multiplicity="0..1" />
+    <End Type="DAL_DataContext.tbleav_entity_attribute_value_int" Role="tbleav_entity_attribute_value_int" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbleav_entity_attribute_custom">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tbleav_entity_attribute_value_int">
+        <PropertyRef Name="eav_entity_attribute_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="tbleav_entity_attribute_value_varchar_ibfk_1">
+    <End Type="DAL_DataContext.tbleav_entity_attribute_custom" Role="tbleav_entity_attribute_custom" Multiplicity="0..1" />
+    <End Type="DAL_DataContext.tbleav_entity_attribute_value_varchar" Role="tbleav_entity_attribute_value_varchar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbleav_entity_attribute_custom">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tbleav_entity_attribute_value_varchar">
+        <PropertyRef Name="eav_entity_attribute_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="tbleav_entity_attribute_value_datetime_ibfk_2">
+    <End Type="DAL_DataContext.tbleav_entity_attribute_value_ref" Role="tbleav_entity_attribute_value_ref" Multiplicity="0..1" />
+    <End Type="DAL_DataContext.tbleav_entity_attribute_value_datetime" Role="tbleav_entity_attribute_value_datetime" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbleav_entity_attribute_value_ref">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tbleav_entity_attribute_value_datetime">
+        <PropertyRef Name="RefID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="tbleav_entity_attribute_value_decimal_ibfk_2">
+    <End Type="DAL_DataContext.tbleav_entity_attribute_value_ref" Role="tbleav_entity_attribute_value_ref" Multiplicity="0..1" />
+    <End Type="DAL_DataContext.tbleav_entity_attribute_value_decimal" Role="tbleav_entity_attribute_value_decimal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbleav_entity_attribute_value_ref">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tbleav_entity_attribute_value_decimal">
+        <PropertyRef Name="RefID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="tbleav_entity_attribute_value_int_ibfk_2">
+    <End Type="DAL_DataContext.tbleav_entity_attribute_value_ref" Role="tbleav_entity_attribute_value_ref" Multiplicity="0..1" />
+    <End Type="DAL_DataContext.tbleav_entity_attribute_value_int" Role="tbleav_entity_attribute_value_int" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbleav_entity_attribute_value_ref">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tbleav_entity_attribute_value_int">
+        <PropertyRef Name="RefID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="tbleav_entity_attribute_value_varchar_ibfk_2">
+    <End Type="DAL_DataContext.tbleav_entity_attribute_value_ref" Role="tbleav_entity_attribute_value_ref" Multiplicity="0..1" />
+    <End Type="DAL_DataContext.tbleav_entity_attribute_value_varchar" Role="tbleav_entity_attribute_value_varchar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbleav_entity_attribute_value_ref">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tbleav_entity_attribute_value_varchar">
+        <PropertyRef Name="RefID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="tbleav_entity_attribute_value_bool">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RefID" Type="Int32" />
+    <Property Name="eav_entity_attribute_id" Type="Int32" />
+    <Property Name="Value" Type="Boolean" />
+    <NavigationProperty Name="tbleav_entity_attribute_custom" Relationship="DAL_DataContext.tbleav_entity_attribute_value_bool_ibfk_2" FromRole="tbleav_entity_attribute_value_bool" ToRole="tbleav_entity_attribute_custom" />
+    <NavigationProperty Name="tbleav_entity_attribute_value_ref" Relationship="DAL_DataContext.tbleav_entity_attribute_value_bool_ibfk_1" FromRole="tbleav_entity_attribute_value_bool" ToRole="tbleav_entity_attribute_value_ref" />
+  </EntityType>
+  <Association Name="tbleav_entity_attribute_value_bool_ibfk_2">
+    <End Type="DAL_DataContext.tbleav_entity_attribute_custom" Role="tbleav_entity_attribute_custom" Multiplicity="0..1" />
+    <End Type="DAL_DataContext.tbleav_entity_attribute_value_bool" Role="tbleav_entity_attribute_value_bool" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbleav_entity_attribute_custom">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tbleav_entity_attribute_value_bool">
+        <PropertyRef Name="eav_entity_attribute_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="tbleav_entity_attribute_value_bool_ibfk_1">
+    <End Type="DAL_DataContext.tbleav_entity_attribute_value_ref" Role="tbleav_entity_attribute_value_ref" Multiplicity="0..1" />
+    <End Type="DAL_DataContext.tbleav_entity_attribute_value_bool" Role="tbleav_entity_attribute_value_bool" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbleav_entity_attribute_value_ref">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tbleav_entity_attribute_value_bool">
+        <PropertyRef Name="RefID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="tbleav_entity_attribute_value_orderdetail_ref">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RefID" Type="Int32" Nullable="false" />
+    <Property Name="OrderNo" Type="Int32" Nullable="false" />
+    <Property Name="CompanyID" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="WareHouseID" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="LineNo" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="tbleav_entity_attribute_value_ref" Relationship="DAL_DataContext.tbleav_entity_attribute_value_orderdetail_ref_ibfk_1" FromRole="tbleav_entity_attribute_value_orderdetail_ref" ToRole="tbleav_entity_attribute_value_ref" />
+    <NavigationProperty Name="tblpop_order_detail" Relationship="DAL_DataContext.tblpop_order_detailtbleav_entity_attribute_value_orderdetail_ref" FromRole="tbleav_entity_attribute_value_orderdetail_ref" ToRole="tblpop_order_detail" />
+    <Property Name="Qty" Type="Int32" Nullable="false" DefaultValue="0" />
+    <Property Name="OSQty" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbleav_entity_attribute_value_orderheader_ref">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RefID" Type="Int32" Nullable="false" />
+    <Property Name="OrderNo" Type="Int32" Nullable="false" />
+    <Property Name="CompanyID" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="WareHouseID" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="tbleav_entity_attribute_value_ref" Relationship="DAL_DataContext.tbleav_entity_attribute_value_orderheader_ref_ibfk_1" FromRole="tbleav_entity_attribute_value_orderheader_ref" ToRole="tbleav_entity_attribute_value_ref" />
+    <NavigationProperty Name="tblpop_order_header" Relationship="DAL_DataContext.tblpop_order_headertbleav_entity_attribute_value_orderheader_ref" FromRole="tbleav_entity_attribute_value_orderheader_ref" ToRole="tblpop_order_header" />
+  </EntityType>
+  <EntityType Name="tbleav_entity_completed_orderdetail">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EntityID" Type="Int32" Nullable="false" />
+    <Property Name="Date" Type="DateTime" Nullable="false" />
+    <Property Name="OrderNo" Type="Int32" Nullable="false" />
+    <Property Name="CompanyID" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="WareHouseID" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="LineNo" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="tbleav_custom_entities" Relationship="DAL_DataContext.tbleav_entity_completed_orderdetail_ibfk_1" FromRole="tbleav_entity_completed_orderdetail" ToRole="tbleav_custom_entities" />
+    <NavigationProperty Name="tblpop_order_detail" Relationship="DAL_DataContext.tblpop_order_detailtbleav_entity_completed_orderdetail" FromRole="tbleav_entity_completed_orderdetail" ToRole="tblpop_order_detail" />
+    <Property Name="Qty" Type="Int32" Nullable="false" DefaultValue="0" />
+    <Property Name="OSQty" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbleav_entity_completed_orderheader">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EntityID" Type="Int32" Nullable="false" />
+    <Property Name="OrderNo" Type="Int32" Nullable="false" />
+    <Property Name="CompanyID" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="WareHouseID" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="tbleav_custom_entities" Relationship="DAL_DataContext.tbleav_entity_completed_orderheader_ibfk_1" FromRole="tbleav_entity_completed_orderheader" ToRole="tbleav_custom_entities" />
+    <Property Name="Date" Type="DateTime" Nullable="false" />
+    <Property Name="User" Type="String" Nullable="false" MaxLength="50" />
+    <NavigationProperty Name="tblpop_order_header" Relationship="DAL_DataContext.tblpop_order_headertbleav_entity_completed_orderheader" FromRole="tbleav_entity_completed_orderheader" ToRole="tblpop_order_header" />
+  </EntityType>
+  <Association Name="tbleav_entity_completed_orderdetail_ibfk_1">
+    <End Type="DAL_DataContext.tbleav_custom_entities" Role="tbleav_custom_entities" Multiplicity="1" />
+    <End Type="DAL_DataContext.tbleav_entity_completed_orderdetail" Role="tbleav_entity_completed_orderdetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbleav_custom_entities">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tbleav_entity_completed_orderdetail">
+        <PropertyRef Name="EntityID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="tbleav_entity_completed_orderheader_ibfk_1">
+    <End Type="DAL_DataContext.tbleav_custom_entities" Role="tbleav_custom_entities" Multiplicity="1" />
+    <End Type="DAL_DataContext.tbleav_entity_completed_orderheader" Role="tbleav_entity_completed_orderheader" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbleav_custom_entities">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tbleav_entity_completed_orderheader">
+        <PropertyRef Name="EntityID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="tbleav_entity_attribute_value_orderdetail_ref_ibfk_1">
+    <End Type="DAL_DataContext.tbleav_entity_attribute_value_ref" Role="tbleav_entity_attribute_value_ref" Multiplicity="1" />
+    <End Type="DAL_DataContext.tbleav_entity_attribute_value_orderdetail_ref" Role="tbleav_entity_attribute_value_orderdetail_ref" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbleav_entity_attribute_value_ref">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tbleav_entity_attribute_value_orderdetail_ref">
+        <PropertyRef Name="RefID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="tbleav_entity_attribute_value_orderheader_ref_ibfk_1">
+    <End Type="DAL_DataContext.tbleav_entity_attribute_value_ref" Role="tbleav_entity_attribute_value_ref" Multiplicity="1" />
+    <End Type="DAL_DataContext.tbleav_entity_attribute_value_orderheader_ref" Role="tbleav_entity_attribute_value_orderheader_ref" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbleav_entity_attribute_value_ref">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tbleav_entity_attribute_value_orderheader_ref">
+        <PropertyRef Name="RefID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="tblpop_order_detailtbleav_entity_attribute_value_orderdetail_ref">
+    <End Type="DAL_DataContext.tblpop_order_detail" Role="tblpop_order_detail" Multiplicity="1" />
+    <End Type="DAL_DataContext.tbleav_entity_attribute_value_orderdetail_ref" Role="tbleav_entity_attribute_value_orderdetail_ref" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblpop_order_detail">
+        <PropertyRef Name="CompanyId" />
+        <PropertyRef Name="WareHouseId" />
+        <PropertyRef Name="OrderNo" />
+        <PropertyRef Name="LineNo" />
+      </Principal>
+      <Dependent Role="tbleav_entity_attribute_value_orderdetail_ref">
+        <PropertyRef Name="CompanyID" />
+        <PropertyRef Name="WareHouseID" />
+        <PropertyRef Name="OrderNo" />
+        <PropertyRef Name="LineNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="tblpop_order_detailtbleav_entity_completed_orderdetail">
+    <End Type="DAL_DataContext.tblpop_order_detail" Role="tblpop_order_detail" Multiplicity="1" />
+    <End Type="DAL_DataContext.tbleav_entity_completed_orderdetail" Role="tbleav_entity_completed_orderdetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblpop_order_detail">
+        <PropertyRef Name="CompanyId" />
+        <PropertyRef Name="WareHouseId" />
+        <PropertyRef Name="OrderNo" />
+        <PropertyRef Name="LineNo" />
+      </Principal>
+      <Dependent Role="tbleav_entity_completed_orderdetail">
+        <PropertyRef Name="CompanyID" />
+        <PropertyRef Name="WareHouseID" />
+        <PropertyRef Name="OrderNo" />
+        <PropertyRef Name="LineNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="tbleav_entity_attribute_value_ref_ibfk_1">
+    <End Type="DAL_DataContext.tbleav_custom_entities" Role="tbleav_custom_entities" Multiplicity="1" />
+    <End Type="DAL_DataContext.tbleav_entity_attribute_value_ref" Role="tbleav_entity_attribute_value_ref" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbleav_custom_entities">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tbleav_entity_attribute_value_ref">
+        <PropertyRef Name="EntityID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="tbldataannotations_custom">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="CustomEntityID" Type="Int32" />
+    <Property Name="DisplayText" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="IsRequired" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="tblcustom_entity" Relationship="DAL_DataContext.tbldataannotations_custom_ibfk_2" FromRole="tbldataannotations_custom" ToRole="tblcustom_entity" />
+    <Property Name="DAID" Type="Int32" />
+    <NavigationProperty Name="tbldataannotations_master" Relationship="DAL_DataContext.tbldataannotations_custom_ibfk_11" FromRole="tbldataannotations_custom" ToRole="tbldataannotations_master" />
+    <Property Name="ErrorMessage" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tbldataannotations_master">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OrgText" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="IsRequired" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="tbldataannotations_custom" Relationship="DAL_DataContext.tbldataannotations_custom_ibfk_11" FromRole="tbldataannotations_master" ToRole="tbldataannotations_custom" />
+    <Property Name="ErrorMessage" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tblpop_despatchnote">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="Date" Type="DateTime" />
+    <Property Name="OrderNo" Type="Int32" />
+    <Property Name="File" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+    <Property Name="User" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IsDeleted" Type="Int32" Nullable="false" />
+  </EntityType>
+  <Association Name="tbldataannotations_custom_ibfk_2">
+    <End Type="DAL_DataContext.tblcustom_entity" Role="tblcustom_entity" Multiplicity="0..1" />
+    <End Type="DAL_DataContext.tbldataannotations_custom" Role="tbldataannotations_custom" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblcustom_entity">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tbldataannotations_custom">
+        <PropertyRef Name="CustomEntityID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="tbldataannotations_custom_ibfk_1">
+    <End Type="DAL_DataContext.tbldataannotations_master" Role="tbldataannotations_master" Multiplicity="1" />
+    <End Type="DAL_DataContext.tbldataannotations_custom" Role="tbldataannotations_custom" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="tbldataannotations_master">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tbldataannotations_custom">
+        <PropertyRef Name="ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="tblpop_order_header">
+    <Key>
+      <PropertyRef Name="CompanyId" />
+      <PropertyRef Name="WareHouseId" />
+      <PropertyRef Name="OrderNo" />
+    </Key>
+    <Property Name="CompanyId" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="WareHouseId" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="OrderNo" Type="Int32" Nullable="false" />
+    <Property Name="SuppID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="OrderDate" Type="DateTime" />
+    <Property Name="InvDesc" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="InvAddress1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="InvAddress2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="InvAddress3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="InvCity" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="InvTown" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="InvPostCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="InvCountry" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DelDesc" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DelAddress1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DelAddress2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DelAddress3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DelCity" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DelTown" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DelPostCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DelCountry" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="OurRef" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="YourRef" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Comments" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+    <Property Name="DelDate" Type="DateTime" />
+    <Property Name="Carrier" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CarrierCharge" Type="Decimal" />
+    <Property Name="CustDisc" Type="Double" />
+    <Property Name="SettDisc" Type="Double" />
+    <Property Name="VolDisc" Type="Double" />
+    <Property Name="RepNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SettlementDays" Type="Int16" />
+    <Property Name="OrderConfirm" Type="Boolean" Nullable="false" />
+    <Property Name="CommentsExternal" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+    <Property Name="Printed" Type="Boolean" Nullable="false" />
+    <Property Name="SalesOrderNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Cancelled" Type="Boolean" Nullable="false" />
+    <Property Name="Completed" Type="Boolean" Nullable="false" />
+    <Property Name="CalendarPeriod" Type="Int32" />
+    <Property Name="Year" Type="Int32" />
+    <Property Name="Total" Type="Double" />
+    <Property Name="UserID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="OrderType" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="AllowAllocation" Type="Boolean" Nullable="false" />
+    <Property Name="ReqBOM" Type="Boolean" />
+    <Property Name="IsPrepaid" Type="Boolean" />
+    <Property Name="CustID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="CustRef" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DispatchMode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DispatchLeadTime" Type="Int32" />
+    <Property Name="EXWDate" Type="DateTime" />
+    <NavigationProperty Name="tblpop_order_detail" Relationship="DAL_DataContext.tblpop_order_headertblpop_order_detail" FromRole="tblpop_order_header" ToRole="tblpop_order_detail" />
+    <NavigationProperty Name="tbleav_entity_completed_orderheader" Relationship="DAL_DataContext.tblpop_order_headertbleav_entity_completed_orderheader" FromRole="tblpop_order_header" ToRole="tbleav_entity_completed_orderheader" />
+    <NavigationProperty Name="tbleav_entity_attribute_value_orderheader_ref" Relationship="DAL_DataContext.tblpop_order_headertbleav_entity_attribute_value_orderheader_ref" FromRole="tblpop_order_header" ToRole="tbleav_entity_attribute_value_orderheader_ref" />
+    <NavigationProperty Name="tblbus_business" Relationship="DAL_DataContext.tblpop_order_header_ibfk_1" FromRole="tblpop_order_header" ToRole="tblbus_business" />
+  </EntityType>
+  <Association Name="tblpop_order_headertblpop_order_detail">
+    <End Type="DAL_DataContext.tblpop_order_header" Role="tblpop_order_header" Multiplicity="1" />
+    <End Type="DAL_DataContext.tblpop_order_detail" Role="tblpop_order_detail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblpop_order_header">
+        <PropertyRef Name="CompanyId" />
+        <PropertyRef Name="WareHouseId" />
+        <PropertyRef Name="OrderNo" />
+      </Principal>
+      <Dependent Role="tblpop_order_detail">
+        <PropertyRef Name="CompanyId" />
+        <PropertyRef Name="WareHouseId" />
+        <PropertyRef Name="OrderNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="tblpop_order_headertbleav_entity_completed_orderheader">
+    <End Type="DAL_DataContext.tblpop_order_header" Role="tblpop_order_header" Multiplicity="1" />
+    <End Type="DAL_DataContext.tbleav_entity_completed_orderheader" Role="tbleav_entity_completed_orderheader" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblpop_order_header">
+        <PropertyRef Name="CompanyId" />
+        <PropertyRef Name="WareHouseId" />
+        <PropertyRef Name="OrderNo" />
+      </Principal>
+      <Dependent Role="tbleav_entity_completed_orderheader">
+        <PropertyRef Name="CompanyID" />
+        <PropertyRef Name="WareHouseID" />
+        <PropertyRef Name="OrderNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="tblpop_order_headertbleav_entity_attribute_value_orderheader_ref">
+    <End Type="DAL_DataContext.tblpop_order_header" Role="tblpop_order_header" Multiplicity="1" />
+    <End Type="DAL_DataContext.tbleav_entity_attribute_value_orderheader_ref" Role="tbleav_entity_attribute_value_orderheader_ref" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblpop_order_header">
+        <PropertyRef Name="CompanyId" />
+        <PropertyRef Name="WareHouseId" />
+        <PropertyRef Name="OrderNo" />
+      </Principal>
+      <Dependent Role="tbleav_entity_attribute_value_orderheader_ref">
+        <PropertyRef Name="CompanyID" />
+        <PropertyRef Name="WareHouseID" />
+        <PropertyRef Name="OrderNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="tbldataannotations_custom_ibfk_11">
+    <End Type="DAL_DataContext.tbldataannotations_master" Role="tbldataannotations_master" Multiplicity="0..1" />
+    <End Type="DAL_DataContext.tbldataannotations_custom" Role="tbldataannotations_custom" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbldataannotations_master">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tbldataannotations_custom">
+        <PropertyRef Name="DAID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="tblpop_order_header_ibfk_1">
+    <End Type="DAL_DataContext.tblbus_business" Role="tblbus_business" Multiplicity="0..1" />
+    <End Type="DAL_DataContext.tblpop_order_header" Role="tblpop_order_header" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblbus_business">
+        <PropertyRef Name="BusinessID" />
+      </Principal>
+      <Dependent Role="tblpop_order_header">
+        <PropertyRef Name="SuppID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="tbleav_email_log">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Date" Type="DateTime" />
+    <Property Name="From" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="To" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CC" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Bcc" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Subject" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+    <Property Name="Message" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+    <Property Name="IsSent" Type="Boolean" />
+    <Property Name="ReasonforError" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tblpop_order_color">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="Code" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tblpop_order_make">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Code" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="tblpop_order_model" Relationship="DAL_DataContext.tblpop_order_model_ibfk_1" FromRole="tblpop_order_make" ToRole="tblpop_order_model" />
+  </EntityType>
+  <EntityType Name="tblpop_order_model">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MakeId" Type="Int32" />
+    <Property Name="Code" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="tblpop_order_make" Relationship="DAL_DataContext.tblpop_order_model_ibfk_1" FromRole="tblpop_order_model" ToRole="tblpop_order_make" />
+  </EntityType>
+  <Association Name="tblpop_order_model_ibfk_1">
+    <End Type="DAL_DataContext.tblpop_order_make" Role="tblpop_order_make" Multiplicity="0..1" />
+    <End Type="DAL_DataContext.tblpop_order_model" Role="tblpop_order_model" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblpop_order_make">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblpop_order_model">
+        <PropertyRef Name="MakeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="tbleav_entity_attribute_value">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="LastDateTime" Type="DateTime" />
+    <Property Name="eav_entity_attribute_id" Type="Int32" />
+    <Property Name="Value" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>

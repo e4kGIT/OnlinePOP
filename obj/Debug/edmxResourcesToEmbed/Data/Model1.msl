@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="e4konlinepop_newModelStoreContainer" CdmEntityContainer="e4konlinepop_newEntities1">
+    <EntitySetMapping Name="tblpop_customer_status">
+      <EntityTypeMapping TypeName="e4konlinepop_newModel.tblpop_customer_status">
+        <MappingFragment StoreEntitySet="tblpop_customer_status">
+          <ScalarProperty Name="PriorityID" ColumnName="PriorityID" />
+          <ScalarProperty Name="StatusDesc" ColumnName="StatusDesc" />
+          <ScalarProperty Name="SupplierID" ColumnName="SupplierID" />
+          <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblpop_order_detail">
+      <EntityTypeMapping TypeName="e4konlinepop_newModel.tblpop_order_detail">
+        <MappingFragment StoreEntitySet="tblpop_order_detail">
+          <ScalarProperty Name="AsmLineNo" ColumnName="AsmLineNo" />
+          <ScalarProperty Name="AssemblyID" ColumnName="AssemblyID" />
+          <ScalarProperty Name="JobSheetLineNo" ColumnName="JobSheetLineNo" />
+          <ScalarProperty Name="JobSheetNo" ColumnName="JobSheetNo" />
+          <ScalarProperty Name="OriginalLineNo" ColumnName="OriginalLineNo" />
+          <ScalarProperty Name="StockingUOM" ColumnName="StockingUOM" />
+          <ScalarProperty Name="IssueQty" ColumnName="IssueQty" />
+          <ScalarProperty Name="IssueUOM" ColumnName="IssueUOM" />
+          <ScalarProperty Name="OutStandingQty" ColumnName="OutStandingQty" />
+          <ScalarProperty Name="FreeText" ColumnName="FreeText" />
+          <ScalarProperty Name="FreeTextType" ColumnName="FreeTextType" />
+          <ScalarProperty Name="DueDate" ColumnName="DueDate" />
+          <ScalarProperty Name="SOLineNo" ColumnName="SOLineNo" />
+          <ScalarProperty Name="SalesOrderNo" ColumnName="SalesOrderNo" />
+          <ScalarProperty Name="Currency_Exchange_Rate" ColumnName="Currency_Exchange_Rate" />
+          <ScalarProperty Name="NomCode" ColumnName="NomCode" />
+          <ScalarProperty Name="VatCode" ColumnName="VatCode" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="CommissionRate" ColumnName="CommissionRate" />
+          <ScalarProperty Name="DespQty" ColumnName="DespQty" />
+          <ScalarProperty Name="InvQty" ColumnName="InvQty" />
+          <ScalarProperty Name="AllQty" ColumnName="AllQty" />
+          <ScalarProperty Name="OrdQty" ColumnName="OrdQty" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="TypeOfIssue" ColumnName="TypeOfIssue" />
+          <ScalarProperty Name="UnitOfIssue" ColumnName="UnitOfIssue" />
+          <ScalarProperty Name="SizeID" ColumnName="SizeID" />
+          <ScalarProperty Name="ColourID" ColumnName="ColourID" />
+          <ScalarProperty Name="StyleID" ColumnName="StyleID" />
+          <ScalarProperty Name="LineType" ColumnName="LineType" />
+          <ScalarProperty Name="LineNo" ColumnName="LineNo" />
+          <ScalarProperty Name="OrderNo" ColumnName="OrderNo" />
+          <ScalarProperty Name="WareHouseId" ColumnName="WareHouseId" />
+          <ScalarProperty Name="CompanyId" ColumnName="CompanyId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblpop_order_detail_reasons">
+      <EntityTypeMapping TypeName="e4konlinepop_newModel.tblpop_order_detail_reasons">
+        <MappingFragment StoreEntitySet="tblpop_order_detail_reasons">
+          <ScalarProperty Name="LastUpdate" ColumnName="LastUpdate" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="Reason" ColumnName="Reason" />
+          <ScalarProperty Name="LineNo" ColumnName="LineNo" />
+          <ScalarProperty Name="OrderNo" ColumnName="OrderNo" />
+          <ScalarProperty Name="WareHouseId" ColumnName="WareHouseId" />
+          <ScalarProperty Name="CompanyId" ColumnName="CompanyId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblpop_order_header">
+      <EntityTypeMapping TypeName="e4konlinepop_newModel.tblpop_order_header">
+        <MappingFragment StoreEntitySet="tblpop_order_header">
+          <ScalarProperty Name="CustRef" ColumnName="CustRef" />
+          <ScalarProperty Name="CustID" ColumnName="CustID" />
+          <ScalarProperty Name="IsPrepaid" ColumnName="IsPrepaid" />
+          <ScalarProperty Name="ReqBOM" ColumnName="ReqBOM" />
+          <ScalarProperty Name="AllowAllocation" ColumnName="AllowAllocation" />
+          <ScalarProperty Name="OrderType" ColumnName="OrderType" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="CalendarPeriod" ColumnName="CalendarPeriod" />
+          <ScalarProperty Name="Completed" ColumnName="Completed" />
+          <ScalarProperty Name="Cancelled" ColumnName="Cancelled" />
+          <ScalarProperty Name="SalesOrderNo" ColumnName="SalesOrderNo" />
+          <ScalarProperty Name="Printed" ColumnName="Printed" />
+          <ScalarProperty Name="CommentsExternal" ColumnName="CommentsExternal" />
+          <ScalarProperty Name="OrderConfirm" ColumnName="OrderConfirm" />
+          <ScalarProperty Name="SettlementDays" ColumnName="SettlementDays" />
+          <ScalarProperty Name="RepNo" ColumnName="RepNo" />
+          <ScalarProperty Name="VolDisc" ColumnName="VolDisc" />
+          <ScalarProperty Name="SettDisc" ColumnName="SettDisc" />
+          <ScalarProperty Name="CustDisc" ColumnName="CustDisc" />
+          <ScalarProperty Name="CarrierCharge" ColumnName="CarrierCharge" />
+          <ScalarProperty Name="Carrier" ColumnName="Carrier" />
+          <ScalarProperty Name="DelDate" ColumnName="DelDate" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="YourRef" ColumnName="YourRef" />
+          <ScalarProperty Name="OurRef" ColumnName="OurRef" />
+          <ScalarProperty Name="DelCountry" ColumnName="DelCountry" />
+          <ScalarProperty Name="DelPostCode" ColumnName="DelPostCode" />
+          <ScalarProperty Name="DelTown" ColumnName="DelTown" />
+          <ScalarProperty Name="DelCity" ColumnName="DelCity" />
+          <ScalarProperty Name="DelAddress3" ColumnName="DelAddress3" />
+          <ScalarProperty Name="DelAddress2" ColumnName="DelAddress2" />
+          <ScalarProperty Name="DelAddress1" ColumnName="DelAddress1" />
+          <ScalarProperty Name="DelDesc" ColumnName="DelDesc" />
+          <ScalarProperty Name="InvCountry" ColumnName="InvCountry" />
+          <ScalarProperty Name="InvPostCode" ColumnName="InvPostCode" />
+          <ScalarProperty Name="InvTown" ColumnName="InvTown" />
+          <ScalarProperty Name="InvCity" ColumnName="InvCity" />
+          <ScalarProperty Name="InvAddress3" ColumnName="InvAddress3" />
+          <ScalarProperty Name="InvAddress2" ColumnName="InvAddress2" />
+          <ScalarProperty Name="InvAddress1" ColumnName="InvAddress1" />
+          <ScalarProperty Name="InvDesc" ColumnName="InvDesc" />
+          <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
+          <ScalarProperty Name="SuppID" ColumnName="SuppID" />
+          <ScalarProperty Name="OrderNo" ColumnName="OrderNo" />
+          <ScalarProperty Name="WareHouseId" ColumnName="WareHouseId" />
+          <ScalarProperty Name="CompanyId" ColumnName="CompanyId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblpop_order_header_status">
+      <EntityTypeMapping TypeName="e4konlinepop_newModel.tblpop_order_header_status">
+        <MappingFragment StoreEntitySet="tblpop_order_header_status">
+          <ScalarProperty Name="LastUpdate" ColumnName="LastUpdate" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+          <ScalarProperty Name="OrderNo" ColumnName="OrderNo" />
+          <ScalarProperty Name="WareHouseId" ColumnName="WareHouseId" />
+          <ScalarProperty Name="CompanyId" ColumnName="CompanyId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

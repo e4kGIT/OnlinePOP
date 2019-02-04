@@ -1,0 +1,607 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DAL_DataContextStoreContainer" CdmEntityContainer="DataContext">
+    <EntitySetMapping Name="tblcore_attributes">
+      <EntityTypeMapping TypeName="DAL_DataContext.tblcore_attributes">
+        <MappingFragment StoreEntitySet="tblcore_attributes">
+          <ScalarProperty Name="FieldTypeLookup" ColumnName="FieldTypeLookup" />
+          <ScalarProperty Name="ControlTypeFrontend" ColumnName="ControlTypeFrontend" />
+          <ScalarProperty Name="AttributeTypeBackend" ColumnName="AttributeTypeBackend" />
+          <ScalarProperty Name="Attribute" ColumnName="Attribute" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblcore_entities">
+      <EntityTypeMapping TypeName="DAL_DataContext.tblcore_entities">
+        <MappingFragment StoreEntitySet="tblcore_entities">
+          <ScalarProperty Name="IsEnable" ColumnName="IsEnable" />
+          <ScalarProperty Name="Notification" ColumnName="Notification" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblcore_types">
+      <EntityTypeMapping TypeName="DAL_DataContext.tblcore_types">
+        <MappingFragment StoreEntitySet="tblcore_types">
+          <ScalarProperty Name="IsEnable" ColumnName="IsEnable" />
+          <ScalarProperty Name="Notification" ColumnName="Notification" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="entity_id" ColumnName="entity_id" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbleav_entities">
+      <EntityTypeMapping TypeName="DAL_DataContext.tbleav_entities">
+        <MappingFragment StoreEntitySet="tbleav_entities">
+          <ScalarProperty Name="IsHeader" ColumnName="IsHeader" />
+          <ScalarProperty Name="IsmailReq" ColumnName="IsmailReq" />
+          <ScalarProperty Name="coreentity_id" ColumnName="coreentity_id" />
+          <ScalarProperty Name="SeqNo" ColumnName="SeqNo" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbleav_entity_attribute">
+      <EntityTypeMapping TypeName="DAL_DataContext.tbleav_entity_attribute">
+        <MappingFragment StoreEntitySet="tbleav_entity_attribute">
+          <ScalarProperty Name="entity_attribute_value" ColumnName="entity_attribute_value" />
+          <ScalarProperty Name="attribute_id" ColumnName="attribute_id" />
+          <ScalarProperty Name="entity_id" ColumnName="entity_id" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbleav_entity_entitytypes">
+      <EntityTypeMapping TypeName="DAL_DataContext.tbleav_entity_entitytypes">
+        <MappingFragment StoreEntitySet="tbleav_entity_entitytypes">
+          <ScalarProperty Name="type_id" ColumnName="type_id" />
+          <ScalarProperty Name="eav_entity_id" ColumnName="eav_entity_id" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblpop_order_detail">
+      <EntityTypeMapping TypeName="DAL_DataContext.tblpop_order_detail">
+        <MappingFragment StoreEntitySet="tblpop_order_detail">
+          <ScalarProperty Name="AsmLineNo" ColumnName="AsmLineNo" />
+          <ScalarProperty Name="AssemblyID" ColumnName="AssemblyID" />
+          <ScalarProperty Name="JobSheetLineNo" ColumnName="JobSheetLineNo" />
+          <ScalarProperty Name="JobSheetNo" ColumnName="JobSheetNo" />
+          <ScalarProperty Name="OriginalLineNo" ColumnName="OriginalLineNo" />
+          <ScalarProperty Name="StockingUOM" ColumnName="StockingUOM" />
+          <ScalarProperty Name="IssueQty" ColumnName="IssueQty" />
+          <ScalarProperty Name="IssueUOM" ColumnName="IssueUOM" />
+          <ScalarProperty Name="OutStandingQty" ColumnName="OutStandingQty" />
+          <ScalarProperty Name="FreeText" ColumnName="FreeText" />
+          <ScalarProperty Name="FreeTextType" ColumnName="FreeTextType" />
+          <ScalarProperty Name="DueDate" ColumnName="DueDate" />
+          <ScalarProperty Name="SOLineNo" ColumnName="SOLineNo" />
+          <ScalarProperty Name="SalesOrderNo" ColumnName="SalesOrderNo" />
+          <ScalarProperty Name="Currency_Exchange_Rate" ColumnName="Currency_Exchange_Rate" />
+          <ScalarProperty Name="NomCode" ColumnName="NomCode" />
+          <ScalarProperty Name="VatCode" ColumnName="VatCode" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="CommissionRate" ColumnName="CommissionRate" />
+          <ScalarProperty Name="DespQty" ColumnName="DespQty" />
+          <ScalarProperty Name="InvQty" ColumnName="InvQty" />
+          <ScalarProperty Name="AllQty" ColumnName="AllQty" />
+          <ScalarProperty Name="OrdQty" ColumnName="OrdQty" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="TypeOfIssue" ColumnName="TypeOfIssue" />
+          <ScalarProperty Name="UnitOfIssue" ColumnName="UnitOfIssue" />
+          <ScalarProperty Name="SizeID" ColumnName="SizeID" />
+          <ScalarProperty Name="ColourID" ColumnName="ColourID" />
+          <ScalarProperty Name="StyleID" ColumnName="StyleID" />
+          <ScalarProperty Name="LineType" ColumnName="LineType" />
+          <ScalarProperty Name="LineNo" ColumnName="LineNo" />
+          <ScalarProperty Name="OrderNo" ColumnName="OrderNo" />
+          <ScalarProperty Name="WareHouseId" ColumnName="WareHouseId" />
+          <ScalarProperty Name="CompanyId" ColumnName="CompanyId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblbus_address">
+      <EntityTypeMapping TypeName="DAL_DataContext.tblbus_address">
+        <MappingFragment StoreEntitySet="tblbus_address">
+          <ScalarProperty Name="ContactID" ColumnName="ContactID" />
+          <ScalarProperty Name="AddressTypeID" ColumnName="AddressTypeID" />
+          <ScalarProperty Name="CountryCode" ColumnName="CountryCode" />
+          <ScalarProperty Name="Postcode" ColumnName="Postcode" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Town" ColumnName="Town" />
+          <ScalarProperty Name="Address3" ColumnName="Address3" />
+          <ScalarProperty Name="Address2" ColumnName="Address2" />
+          <ScalarProperty Name="Address1" ColumnName="Address1" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="AddressID" ColumnName="AddressID" />
+          <ScalarProperty Name="BusinessID" ColumnName="BusinessID" />
+          <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblbus_business">
+      <EntityTypeMapping TypeName="DAL_DataContext.tblbus_business">
+        <MappingFragment StoreEntitySet="tblbus_business">
+          <ScalarProperty Name="IsExtract" ColumnName="IsExtract" />
+          <ScalarProperty Name="CoupleID" ColumnName="CoupleID" />
+          <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="Factoring_No" ColumnName="Factoring_No" />
+          <ScalarProperty Name="Default_Nominal" ColumnName="Default_Nominal" />
+          <ScalarProperty Name="AnalysisCodeID" ColumnName="AnalysisCodeID" />
+          <ScalarProperty Name="Live" ColumnName="Live" />
+          <ScalarProperty Name="Country_Currency" ColumnName="Country_Currency" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="BusType" ColumnName="BusType" />
+          <ScalarProperty Name="BusinessID" ColumnName="BusinessID" />
+          <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblcore_entity_types">
+      <EntityTypeMapping TypeName="DAL_DataContext.tblcore_entity_types">
+        <MappingFragment StoreEntitySet="tblcore_entity_types">
+          <ScalarProperty Name="type_id" ColumnName="type_id" />
+          <ScalarProperty Name="entity_id" ColumnName="entity_id" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblcustom_entity">
+      <EntityTypeMapping TypeName="DAL_DataContext.tblcustom_entity">
+        <MappingFragment StoreEntitySet="tblcustom_entity">
+          <ScalarProperty Name="EntityID" ColumnName="EntityID" />
+          <ScalarProperty Name="ReferenceID" ColumnName="ReferenceID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbleav_custom_entities">
+      <EntityTypeMapping TypeName="DAL_DataContext.tbleav_custom_entities">
+        <MappingFragment StoreEntitySet="tbleav_custom_entities">
+          <ScalarProperty Name="IsDocument" ColumnName="IsDocument" />
+          <ScalarProperty Name="IsHeader" ColumnName="IsHeader" />
+          <ScalarProperty Name="IsmailReq" ColumnName="IsmailReq" />
+          <ScalarProperty Name="SeqNo" ColumnName="SeqNo" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="CustomEntityID" ColumnName="CustomEntityID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IsDespatchType" ColumnName="IsDespatchType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbleav_entity_attribute_custom">
+      <EntityTypeMapping TypeName="DAL_DataContext.tbleav_entity_attribute_custom">
+        <MappingFragment StoreEntitySet="tbleav_entity_attribute_custom">
+          <ScalarProperty Name="DisplayText" ColumnName="DisplayText" />
+          <ScalarProperty Name="entity_attribute_value" ColumnName="entity_attribute_value" />
+          <ScalarProperty Name="attribute_id" ColumnName="attribute_id" />
+          <ScalarProperty Name="entity_id" ColumnName="entity_id" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblfsk_style">
+      <EntityTypeMapping TypeName="DAL_DataContext.tblfsk_style">
+        <MappingFragment StoreEntitySet="tblfsk_style">
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="StockingType" ColumnName="StockingType" />
+          <ScalarProperty Name="IssueUOM" ColumnName="IssueUOM" />
+          <ScalarProperty Name="StockingUOM" ColumnName="StockingUOM" />
+          <ScalarProperty Name="BatchControl" ColumnName="BatchControl" />
+          <ScalarProperty Name="StyleImage" ColumnName="StyleImage" />
+          <ScalarProperty Name="Live" ColumnName="Live" />
+          <ScalarProperty Name="Obsolete_Class" ColumnName="Obsolete_Class" />
+          <ScalarProperty Name="ClassID" ColumnName="ClassID" />
+          <ScalarProperty Name="Season" ColumnName="Season" />
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+          <ScalarProperty Name="Commodity_Code" ColumnName="Commodity_Code" />
+          <ScalarProperty Name="Nominal_Code" ColumnName="Nominal_Code" />
+          <ScalarProperty Name="Allowance" ColumnName="Allowance" />
+          <ScalarProperty Name="Waste" ColumnName="Waste" />
+          <ScalarProperty Name="Yield" ColumnName="Yield" />
+          <ScalarProperty Name="Overhead" ColumnName="Overhead" />
+          <ScalarProperty Name="Maxmat" ColumnName="Maxmat" />
+          <ScalarProperty Name="Maxop" ColumnName="Maxop" />
+          <ScalarProperty Name="Maxcol" ColumnName="Maxcol" />
+          <ScalarProperty Name="Maxsize" ColumnName="Maxsize" />
+          <ScalarProperty Name="Picture" ColumnName="Picture" />
+          <ScalarProperty Name="Issue_Units" ColumnName="Issue_Units" />
+          <ScalarProperty Name="Issue_Type" ColumnName="Issue_Type" />
+          <ScalarProperty Name="SupplimentaryUnits" ColumnName="SupplimentaryUnits" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="Product_Group_Sub" ColumnName="Product_Group_Sub" />
+          <ScalarProperty Name="Product_Group" ColumnName="Product_Group" />
+          <ScalarProperty Name="Bundle" ColumnName="Bundle" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="StyleID" ColumnName="StyleID" />
+          <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblfsk_style_sizes">
+      <EntityTypeMapping TypeName="DAL_DataContext.tblfsk_style_sizes">
+        <MappingFragment StoreEntitySet="tblfsk_style_sizes">
+          <ScalarProperty Name="IsStatic" ColumnName="IsStatic" />
+          <ScalarProperty Name="StockingType" ColumnName="StockingType" />
+          <ScalarProperty Name="PriceOptionID" ColumnName="PriceOptionID" />
+          <ScalarProperty Name="VATCode" ColumnName="VATCode" />
+          <ScalarProperty Name="SeqNo" ColumnName="SeqNo" />
+          <ScalarProperty Name="SizeID" ColumnName="SizeID" />
+          <ScalarProperty Name="StyleID" ColumnName="StyleID" />
+          <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblfsk_style_suppliers">
+      <EntityTypeMapping TypeName="DAL_DataContext.tblfsk_style_suppliers">
+        <MappingFragment StoreEntitySet="tblfsk_style_suppliers">
+          <ScalarProperty Name="IsBulkOrder" ColumnName="IsBulkOrder" />
+          <ScalarProperty Name="WarehouseID" ColumnName="WarehouseID" />
+          <ScalarProperty Name="Leadtime" ColumnName="Leadtime" />
+          <ScalarProperty Name="SizeID" ColumnName="SizeID" />
+          <ScalarProperty Name="SupplierSeq" ColumnName="SupplierSeq" />
+          <ScalarProperty Name="Supplier_price" ColumnName="Supplier_price" />
+          <ScalarProperty Name="SupplierProd_code" ColumnName="SupplierProd_code" />
+          <ScalarProperty Name="StyleID" ColumnName="StyleID" />
+          <ScalarProperty Name="SupplierID" ColumnName="SupplierID" />
+          <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblonline_user_map">
+      <EntityTypeMapping TypeName="DAL_DataContext.tblonline_user_map">
+        <MappingFragment StoreEntitySet="tblonline_user_map">
+          <ScalarProperty Name="CustomEntityID" ColumnName="CustomEntityID" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblbus_setvalues">
+      <EntityTypeMapping TypeName="DAL_DataContext.tblbus_setvalues">
+        <MappingFragment StoreEntitySet="tblbus_setvalues">
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="SettingID" ColumnName="SettingID" />
+          <ScalarProperty Name="BusinessID" ColumnName="BusinessID" />
+          <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblcustommenus">
+      <EntityTypeMapping TypeName="DAL_DataContext.tblcustommenu">
+        <MappingFragment StoreEntitySet="tblcustommenu">
+          <ScalarProperty Name="SeqNo" ColumnName="SeqNo" />
+          <ScalarProperty Name="ISLoginReq" ColumnName="ISLoginReq" />
+          <ScalarProperty Name="IsEnabled" ColumnName="IsEnabled" />
+          <ScalarProperty Name="URL" ColumnName="URL" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="customEntityID" ColumnName="customEntityID" />
+          <ScalarProperty Name="MainID" ColumnName="MainID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblmainmenus">
+      <EntityTypeMapping TypeName="DAL_DataContext.tblmainmenu">
+        <MappingFragment StoreEntitySet="tblmainmenu">
+          <ScalarProperty Name="SeqNo" ColumnName="SeqNo" />
+          <ScalarProperty Name="IsLoginReq" ColumnName="IsLoginReq" />
+          <ScalarProperty Name="IsEnabled" ColumnName="IsEnabled" />
+          <ScalarProperty Name="URL" ColumnName="URL" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblsubmenus">
+      <EntityTypeMapping TypeName="DAL_DataContext.tblsubmenu">
+        <MappingFragment StoreEntitySet="tblsubmenu">
+          <ScalarProperty Name="SeqNo" ColumnName="SeqNo" />
+          <ScalarProperty Name="ISLoginReq" ColumnName="ISLoginReq" />
+          <ScalarProperty Name="IsEnabled" ColumnName="IsEnabled" />
+          <ScalarProperty Name="URL" ColumnName="URL" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="MainID" ColumnName="MainID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnetroles">
+      <EntityTypeMapping TypeName="DAL_DataContext.aspnetrole">
+        <MappingFragment StoreEntitySet="aspnetroles">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnetusers">
+      <EntityTypeMapping TypeName="DAL_DataContext.aspnetuser">
+        <MappingFragment StoreEntitySet="aspnetusers">
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="AccessFailedCount" ColumnName="AccessFailedCount" />
+          <ScalarProperty Name="LockoutEnabled" ColumnName="LockoutEnabled" />
+          <ScalarProperty Name="LockoutEndDateUtc" ColumnName="LockoutEndDateUtc" />
+          <ScalarProperty Name="TwoFactorEnabled" ColumnName="TwoFactorEnabled" />
+          <ScalarProperty Name="PhoneNumberConfirmed" ColumnName="PhoneNumberConfirmed" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="SecurityStamp" ColumnName="SecurityStamp" />
+          <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
+          <ScalarProperty Name="EmailConfirmed" ColumnName="EmailConfirmed" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="aspnetuserroles" TypeName="DAL_DataContext.aspnetuserroles" StoreEntitySet="aspnetuserroles">
+      <EndProperty Name="aspnetrole">
+        <ScalarProperty Name="Id" ColumnName="RoleId" />
+      </EndProperty>
+      <EndProperty Name="aspnetuser">
+        <ScalarProperty Name="Id" ColumnName="UserId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <EntitySetMapping Name="tbleav_entity_attribute_value_datetime">
+      <EntityTypeMapping TypeName="DAL_DataContext.tbleav_entity_attribute_value_datetime">
+        <MappingFragment StoreEntitySet="tbleav_entity_attribute_value_datetime">
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="eav_entity_attribute_id" ColumnName="eav_entity_attribute_id" />
+          <ScalarProperty Name="RefID" ColumnName="RefID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbleav_entity_attribute_value_decimal">
+      <EntityTypeMapping TypeName="DAL_DataContext.tbleav_entity_attribute_value_decimal">
+        <MappingFragment StoreEntitySet="tbleav_entity_attribute_value_decimal">
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="eav_entity_attribute_id" ColumnName="eav_entity_attribute_id" />
+          <ScalarProperty Name="RefID" ColumnName="RefID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbleav_entity_attribute_value_int">
+      <EntityTypeMapping TypeName="DAL_DataContext.tbleav_entity_attribute_value_int">
+        <MappingFragment StoreEntitySet="tbleav_entity_attribute_value_int">
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="eav_entity_attribute_id" ColumnName="eav_entity_attribute_id" />
+          <ScalarProperty Name="RefID" ColumnName="RefID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbleav_entity_attribute_value_ref">
+      <EntityTypeMapping TypeName="DAL_DataContext.tbleav_entity_attribute_value_ref">
+        <MappingFragment StoreEntitySet="tbleav_entity_attribute_value_ref">
+          <ScalarProperty Name="EntityID" ColumnName="EntityID" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbleav_entity_attribute_value_varchar">
+      <EntityTypeMapping TypeName="DAL_DataContext.tbleav_entity_attribute_value_varchar">
+        <MappingFragment StoreEntitySet="tbleav_entity_attribute_value_varchar">
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="eav_entity_attribute_id" ColumnName="eav_entity_attribute_id" />
+          <ScalarProperty Name="RefID" ColumnName="RefID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbleav_entity_attribute_value_bool">
+      <EntityTypeMapping TypeName="DAL_DataContext.tbleav_entity_attribute_value_bool">
+        <MappingFragment StoreEntitySet="tbleav_entity_attribute_value_bool">
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="eav_entity_attribute_id" ColumnName="eav_entity_attribute_id" />
+          <ScalarProperty Name="RefID" ColumnName="RefID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbleav_entity_attribute_value_orderdetail_ref">
+      <EntityTypeMapping TypeName="DAL_DataContext.tbleav_entity_attribute_value_orderdetail_ref">
+        <MappingFragment StoreEntitySet="tbleav_entity_attribute_value_orderdetail_ref">
+          <ScalarProperty Name="OSQty" ColumnName="OSQty" />
+          <ScalarProperty Name="LineNo" ColumnName="LineNo" />
+          <ScalarProperty Name="WareHouseID" ColumnName="WareHouseID" />
+          <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+          <ScalarProperty Name="OrderNo" ColumnName="OrderNo" />
+          <ScalarProperty Name="RefID" ColumnName="RefID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbleav_entity_attribute_value_orderheader_ref">
+      <EntityTypeMapping TypeName="DAL_DataContext.tbleav_entity_attribute_value_orderheader_ref">
+        <MappingFragment StoreEntitySet="tbleav_entity_attribute_value_orderheader_ref">
+          <ScalarProperty Name="WareHouseID" ColumnName="WareHouseID" />
+          <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+          <ScalarProperty Name="OrderNo" ColumnName="OrderNo" />
+          <ScalarProperty Name="RefID" ColumnName="RefID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbleav_entity_completed_orderdetail">
+      <EntityTypeMapping TypeName="DAL_DataContext.tbleav_entity_completed_orderdetail">
+        <MappingFragment StoreEntitySet="tbleav_entity_completed_orderdetail">
+          <ScalarProperty Name="OSQty" ColumnName="OSQty" />
+          <ScalarProperty Name="LineNo" ColumnName="LineNo" />
+          <ScalarProperty Name="WareHouseID" ColumnName="WareHouseID" />
+          <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+          <ScalarProperty Name="OrderNo" ColumnName="OrderNo" />
+          <ScalarProperty Name="EntityID" ColumnName="EntityID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbleav_entity_completed_orderheader">
+      <EntityTypeMapping TypeName="DAL_DataContext.tbleav_entity_completed_orderheader">
+        <MappingFragment StoreEntitySet="tbleav_entity_completed_orderheader">
+          <ScalarProperty Name="WareHouseID" ColumnName="WareHouseID" />
+          <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+          <ScalarProperty Name="OrderNo" ColumnName="OrderNo" />
+          <ScalarProperty Name="EntityID" ColumnName="EntityID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="User" ColumnName="User" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbldataannotations_custom">
+      <EntityTypeMapping TypeName="DAL_DataContext.tbldataannotations_custom">
+        <MappingFragment StoreEntitySet="tbldataannotations_custom">
+          <ScalarProperty Name="ErrorMessage" ColumnName="ErrorMessage" />
+          <ScalarProperty Name="DAID" ColumnName="DAID" />
+          <ScalarProperty Name="IsRequired" ColumnName="IsRequired" />
+          <ScalarProperty Name="DisplayText" ColumnName="DisplayText" />
+          <ScalarProperty Name="CustomEntityID" ColumnName="CustomEntityID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbldataannotations_master">
+      <EntityTypeMapping TypeName="DAL_DataContext.tbldataannotations_master">
+        <MappingFragment StoreEntitySet="tbldataannotations_master">
+          <ScalarProperty Name="ErrorMessage" ColumnName="ErrorMessage" />
+          <ScalarProperty Name="IsRequired" ColumnName="IsRequired" />
+          <ScalarProperty Name="OrgText" ColumnName="OrgText" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblpop_despatchnote">
+      <EntityTypeMapping TypeName="DAL_DataContext.tblpop_despatchnote">
+        <MappingFragment StoreEntitySet="tblpop_despatchnote">
+          <ScalarProperty Name="User" ColumnName="User" />
+          <ScalarProperty Name="File" ColumnName="File" />
+          <ScalarProperty Name="OrderNo" ColumnName="OrderNo" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblpop_order_header">
+      <EntityTypeMapping TypeName="DAL_DataContext.tblpop_order_header">
+        <MappingFragment StoreEntitySet="tblpop_order_header">
+          <ScalarProperty Name="EXWDate" ColumnName="EXWDate" />
+          <ScalarProperty Name="DispatchLeadTime" ColumnName="DispatchLeadTime" />
+          <ScalarProperty Name="DispatchMode" ColumnName="DispatchMode" />
+          <ScalarProperty Name="CustRef" ColumnName="CustRef" />
+          <ScalarProperty Name="CustID" ColumnName="CustID" />
+          <ScalarProperty Name="IsPrepaid" ColumnName="IsPrepaid" />
+          <ScalarProperty Name="ReqBOM" ColumnName="ReqBOM" />
+          <ScalarProperty Name="AllowAllocation" ColumnName="AllowAllocation" />
+          <ScalarProperty Name="OrderType" ColumnName="OrderType" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="CalendarPeriod" ColumnName="CalendarPeriod" />
+          <ScalarProperty Name="Completed" ColumnName="Completed" />
+          <ScalarProperty Name="Cancelled" ColumnName="Cancelled" />
+          <ScalarProperty Name="SalesOrderNo" ColumnName="SalesOrderNo" />
+          <ScalarProperty Name="Printed" ColumnName="Printed" />
+          <ScalarProperty Name="CommentsExternal" ColumnName="CommentsExternal" />
+          <ScalarProperty Name="OrderConfirm" ColumnName="OrderConfirm" />
+          <ScalarProperty Name="SettlementDays" ColumnName="SettlementDays" />
+          <ScalarProperty Name="RepNo" ColumnName="RepNo" />
+          <ScalarProperty Name="VolDisc" ColumnName="VolDisc" />
+          <ScalarProperty Name="SettDisc" ColumnName="SettDisc" />
+          <ScalarProperty Name="CustDisc" ColumnName="CustDisc" />
+          <ScalarProperty Name="CarrierCharge" ColumnName="CarrierCharge" />
+          <ScalarProperty Name="Carrier" ColumnName="Carrier" />
+          <ScalarProperty Name="DelDate" ColumnName="DelDate" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="YourRef" ColumnName="YourRef" />
+          <ScalarProperty Name="OurRef" ColumnName="OurRef" />
+          <ScalarProperty Name="DelCountry" ColumnName="DelCountry" />
+          <ScalarProperty Name="DelPostCode" ColumnName="DelPostCode" />
+          <ScalarProperty Name="DelTown" ColumnName="DelTown" />
+          <ScalarProperty Name="DelCity" ColumnName="DelCity" />
+          <ScalarProperty Name="DelAddress3" ColumnName="DelAddress3" />
+          <ScalarProperty Name="DelAddress2" ColumnName="DelAddress2" />
+          <ScalarProperty Name="DelAddress1" ColumnName="DelAddress1" />
+          <ScalarProperty Name="DelDesc" ColumnName="DelDesc" />
+          <ScalarProperty Name="InvCountry" ColumnName="InvCountry" />
+          <ScalarProperty Name="InvPostCode" ColumnName="InvPostCode" />
+          <ScalarProperty Name="InvTown" ColumnName="InvTown" />
+          <ScalarProperty Name="InvCity" ColumnName="InvCity" />
+          <ScalarProperty Name="InvAddress3" ColumnName="InvAddress3" />
+          <ScalarProperty Name="InvAddress2" ColumnName="InvAddress2" />
+          <ScalarProperty Name="InvAddress1" ColumnName="InvAddress1" />
+          <ScalarProperty Name="InvDesc" ColumnName="InvDesc" />
+          <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
+          <ScalarProperty Name="SuppID" ColumnName="SuppID" />
+          <ScalarProperty Name="OrderNo" ColumnName="OrderNo" />
+          <ScalarProperty Name="WareHouseId" ColumnName="WareHouseId" />
+          <ScalarProperty Name="CompanyId" ColumnName="CompanyId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbleav_email_log">
+      <EntityTypeMapping TypeName="DAL_DataContext.tbleav_email_log">
+        <MappingFragment StoreEntitySet="tbleav_email_log">
+          <ScalarProperty Name="ReasonforError" ColumnName="ReasonforError" />
+          <ScalarProperty Name="IsSent" ColumnName="IsSent" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+          <ScalarProperty Name="Subject" ColumnName="Subject" />
+          <ScalarProperty Name="Bcc" ColumnName="Bcc" />
+          <ScalarProperty Name="CC" ColumnName="CC" />
+          <ScalarProperty Name="To" ColumnName="To" />
+          <ScalarProperty Name="From" ColumnName="From" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblpop_order_color">
+      <EntityTypeMapping TypeName="DAL_DataContext.tblpop_order_color">
+        <MappingFragment StoreEntitySet="tblpop_order_color">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblpop_order_make">
+      <EntityTypeMapping TypeName="DAL_DataContext.tblpop_order_make">
+        <MappingFragment StoreEntitySet="tblpop_order_make">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblpop_order_model">
+      <EntityTypeMapping TypeName="DAL_DataContext.tblpop_order_model">
+        <MappingFragment StoreEntitySet="tblpop_order_model">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="MakeId" ColumnName="MakeId" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbleav_entity_attribute_value">
+      <EntityTypeMapping TypeName="DAL_DataContext.tbleav_entity_attribute_value">
+        <MappingFragment StoreEntitySet="tbleav_entity_attribute_value">
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="eav_entity_attribute_id" ColumnName="eav_entity_attribute_id" />
+          <ScalarProperty Name="LastDateTime" ColumnName="LastDateTime" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

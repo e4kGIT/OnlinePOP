@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="e4konlinepop_newModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.6" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tblpop_customer_status">
+    <Key>
+      <PropertyRef Name="StatusID" />
+    </Key>
+    <Property Name="StatusID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SupplierID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="StatusDesc" Type="varchar" MaxLength="100" />
+    <Property Name="PriorityID" Type="int" />
+  </EntityType>
+  <EntityType Name="tblpop_order_detail">
+    <Key>
+      <PropertyRef Name="CompanyId" />
+      <PropertyRef Name="WareHouseId" />
+      <PropertyRef Name="OrderNo" />
+      <PropertyRef Name="LineNo" />
+    </Key>
+    <Property Name="CompanyId" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="WareHouseId" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="OrderNo" Type="int" Nullable="false" />
+    <Property Name="LineNo" Type="int" Nullable="false" />
+    <Property Name="LineType" Type="smallint" />
+    <Property Name="StyleID" Type="varchar" MaxLength="25" />
+    <Property Name="ColourID" Type="varchar" MaxLength="15" />
+    <Property Name="SizeID" Type="varchar" MaxLength="10" />
+    <Property Name="UnitOfIssue" Type="int" />
+    <Property Name="TypeOfIssue" Type="int" />
+    <Property Name="Description" Type="varchar" MaxLength="50" />
+    <Property Name="Price" Type="decimal" Precision="19" Scale="4" />
+    <Property Name="OrdQty" Type="int" />
+    <Property Name="AllQty" Type="int" />
+    <Property Name="InvQty" Type="int" />
+    <Property Name="DespQty" Type="int" />
+    <Property Name="CommissionRate" Type="decimal" Precision="19" Scale="4" />
+    <Property Name="Discount" Type="int" />
+    <Property Name="VatCode" Type="smallint" />
+    <Property Name="NomCode" Type="varchar" MaxLength="50" />
+    <Property Name="Currency_Exchange_Rate" Type="int" />
+    <Property Name="SalesOrderNo" Type="int" />
+    <Property Name="SOLineNo" Type="int" />
+    <Property Name="DueDate" Type="datetime" Precision="0" />
+    <Property Name="FreeTextType" Type="varchar" MaxLength="50" />
+    <Property Name="FreeText" Type="text" />
+    <Property Name="OutStandingQty" Type="int" />
+    <Property Name="IssueUOM" Type="int" />
+    <Property Name="IssueQty" Type="int" />
+    <Property Name="StockingUOM" Type="int" />
+    <Property Name="OriginalLineNo" Type="int" />
+    <Property Name="JobSheetNo" Type="int" />
+    <Property Name="JobSheetLineNo" Type="int" />
+    <Property Name="AssemblyID" Type="int" />
+    <Property Name="AsmLineNo" Type="int" />
+  </EntityType>
+  <EntityType Name="tblpop_order_detail_reasons">
+    <Key>
+      <PropertyRef Name="CompanyId" />
+      <PropertyRef Name="WareHouseId" />
+      <PropertyRef Name="OrderNo" />
+      <PropertyRef Name="LineNo" />
+    </Key>
+    <Property Name="CompanyId" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="WareHouseId" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="OrderNo" Type="int" Nullable="false" />
+    <Property Name="LineNo" Type="int" Nullable="false" />
+    <Property Name="Reason" Type="varchar" MaxLength="200" />
+    <Property Name="UserID" Type="int" />
+    <Property Name="LastUpdate" Type="datetime" Precision="0" />
+  </EntityType>
+  <EntityType Name="tblpop_order_header">
+    <Key>
+      <PropertyRef Name="CompanyId" />
+      <PropertyRef Name="WareHouseId" />
+      <PropertyRef Name="OrderNo" />
+    </Key>
+    <Property Name="CompanyId" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="WareHouseId" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="OrderNo" Type="int" Nullable="false" />
+    <Property Name="SuppID" Type="varchar" MaxLength="10" />
+    <Property Name="OrderDate" Type="datetime" Precision="0" />
+    <Property Name="InvDesc" Type="varchar" MaxLength="50" />
+    <Property Name="InvAddress1" Type="varchar" MaxLength="50" />
+    <Property Name="InvAddress2" Type="varchar" MaxLength="50" />
+    <Property Name="InvAddress3" Type="varchar" MaxLength="50" />
+    <Property Name="InvCity" Type="varchar" MaxLength="50" />
+    <Property Name="InvTown" Type="varchar" MaxLength="50" />
+    <Property Name="InvPostCode" Type="varchar" MaxLength="50" />
+    <Property Name="InvCountry" Type="varchar" MaxLength="50" />
+    <Property Name="DelDesc" Type="varchar" MaxLength="50" />
+    <Property Name="DelAddress1" Type="varchar" MaxLength="50" />
+    <Property Name="DelAddress2" Type="varchar" MaxLength="50" />
+    <Property Name="DelAddress3" Type="varchar" MaxLength="50" />
+    <Property Name="DelCity" Type="varchar" MaxLength="50" />
+    <Property Name="DelTown" Type="varchar" MaxLength="50" />
+    <Property Name="DelPostCode" Type="varchar" MaxLength="50" />
+    <Property Name="DelCountry" Type="varchar" MaxLength="50" />
+    <Property Name="OurRef" Type="varchar" MaxLength="50" />
+    <Property Name="YourRef" Type="varchar" MaxLength="50" />
+    <Property Name="Comments" Type="text" />
+    <Property Name="DelDate" Type="datetime" Precision="0" />
+    <Property Name="Carrier" Type="varchar" MaxLength="50" />
+    <Property Name="CarrierCharge" Type="decimal" Precision="19" Scale="4" />
+    <Property Name="CustDisc" Type="double" />
+    <Property Name="SettDisc" Type="double" />
+    <Property Name="VolDisc" Type="double" />
+    <Property Name="RepNo" Type="varchar" MaxLength="50" />
+    <Property Name="SettlementDays" Type="smallint" />
+    <Property Name="OrderConfirm" Type="bool" Nullable="false" />
+    <Property Name="CommentsExternal" Type="text" />
+    <Property Name="Printed" Type="bit" Nullable="false" />
+    <Property Name="SalesOrderNo" Type="varchar" MaxLength="50" />
+    <Property Name="Cancelled" Type="bool" Nullable="false" />
+    <Property Name="Completed" Type="bool" Nullable="false" />
+    <Property Name="CalendarPeriod" Type="int" />
+    <Property Name="Year" Type="int" />
+    <Property Name="Total" Type="double" />
+    <Property Name="UserID" Type="varchar" MaxLength="20" />
+    <Property Name="OrderType" Type="varchar" MaxLength="2" />
+    <Property Name="AllowAllocation" Type="bool" Nullable="false" />
+    <Property Name="ReqBOM" Type="bool" />
+    <Property Name="IsPrepaid" Type="bool" />
+    <Property Name="CustID" Type="varchar" MaxLength="10" />
+    <Property Name="CustRef" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="tblpop_order_header_status">
+    <Key>
+      <PropertyRef Name="CompanyId" />
+      <PropertyRef Name="WareHouseId" />
+      <PropertyRef Name="OrderNo" />
+      <PropertyRef Name="StatusID" />
+    </Key>
+    <Property Name="CompanyId" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="WareHouseId" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="OrderNo" Type="int" Nullable="false" />
+    <Property Name="StatusID" Type="int" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="LastUpdate" Type="datetime" Precision="0" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6035: The relationship 'tblpop_order_detail_ibfk_1' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
+        <Association Name="tblpop_order_detail_ibfk_1" />-->
+  <!--Errors Found During Generation:
+warning 6035: The relationship 'tblpop_order_detail_reasons_ibfk_1' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
+        <Association Name="tblpop_order_detail_reasons_ibfk_1" />-->
+  <!--Errors Found During Generation:
+warning 6035: The relationship 'tblpop_order_header_status_ibfk_1' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
+        <Association Name="tblpop_order_header_status_ibfk_1" />-->
+  <Association Name="tblpop_order_header_status_ibfk_4">
+    <End Role="tblpop_customer_status" Type="Self.tblpop_customer_status" Multiplicity="1" />
+    <End Role="tblpop_order_header_status" Type="Self.tblpop_order_header_status" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblpop_customer_status">
+        <PropertyRef Name="StatusID" />
+      </Principal>
+      <Dependent Role="tblpop_order_header_status">
+        <PropertyRef Name="StatusID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="e4konlinepop_newModelStoreContainer">
+    <EntitySet Name="tblpop_customer_status" EntityType="Self.tblpop_customer_status" Schema="e4konlinepop_new" store:Type="Tables" />
+    <EntitySet Name="tblpop_order_detail" EntityType="Self.tblpop_order_detail" Schema="e4konlinepop_new" store:Type="Tables" />
+    <EntitySet Name="tblpop_order_detail_reasons" EntityType="Self.tblpop_order_detail_reasons" Schema="e4konlinepop_new" store:Type="Tables" />
+    <EntitySet Name="tblpop_order_header" EntityType="Self.tblpop_order_header" Schema="e4konlinepop_new" store:Type="Tables" />
+    <EntitySet Name="tblpop_order_header_status" EntityType="Self.tblpop_order_header_status" Schema="e4konlinepop_new" store:Type="Tables" />
+    <AssociationSet Name="tblpop_order_header_status_ibfk_4" Association="Self.tblpop_order_header_status_ibfk_4">
+      <End Role="tblpop_customer_status" EntitySet="tblpop_customer_status" />
+      <End Role="tblpop_order_header_status" EntitySet="tblpop_order_header_status" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

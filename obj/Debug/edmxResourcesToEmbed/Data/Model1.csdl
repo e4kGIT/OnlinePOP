@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="e4konlinepop_newModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="e4konlinepop_newEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tblpop_customer_status" EntityType="e4konlinepop_newModel.tblpop_customer_status" />
+    <EntitySet Name="tblpop_order_detail" EntityType="e4konlinepop_newModel.tblpop_order_detail" />
+    <EntitySet Name="tblpop_order_detail_reasons" EntityType="e4konlinepop_newModel.tblpop_order_detail_reasons" />
+    <EntitySet Name="tblpop_order_header" EntityType="e4konlinepop_newModel.tblpop_order_header" />
+    <EntitySet Name="tblpop_order_header_status" EntityType="e4konlinepop_newModel.tblpop_order_header_status" />
+    <AssociationSet Name="tblpop_order_header_status_ibfk_4" Association="e4konlinepop_newModel.tblpop_order_header_status_ibfk_4">
+      <End Role="tblpop_customer_status" EntitySet="tblpop_customer_status" />
+      <End Role="tblpop_order_header_status" EntitySet="tblpop_order_header_status" />
+    </AssociationSet>
+    <AssociationSet Name="tblpop_order_headertblpop_order_detail" Association="e4konlinepop_newModel.tblpop_order_headertblpop_order_detail">
+      <End Role="tblpop_order_header" EntitySet="tblpop_order_header" />
+      <End Role="tblpop_order_detail" EntitySet="tblpop_order_detail" />
+    </AssociationSet>
+    <AssociationSet Name="tblpop_order_headertblpop_order_header_status" Association="e4konlinepop_newModel.tblpop_order_headertblpop_order_header_status">
+      <End Role="tblpop_order_header" EntitySet="tblpop_order_header" />
+      <End Role="tblpop_order_header_status" EntitySet="tblpop_order_header_status" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="tblpop_customer_status">
+    <Key>
+      <PropertyRef Name="StatusID" />
+    </Key>
+    <Property Name="StatusID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SupplierID" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="StatusDesc" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="PriorityID" Type="Int32" />
+    <NavigationProperty Name="tblpop_order_header_status" Relationship="e4konlinepop_newModel.tblpop_order_header_status_ibfk_4" FromRole="tblpop_customer_status" ToRole="tblpop_order_header_status" />
+  </EntityType>
+  <EntityType Name="tblpop_order_detail">
+    <Key>
+      <PropertyRef Name="CompanyId" />
+      <PropertyRef Name="WareHouseId" />
+      <PropertyRef Name="OrderNo" />
+      <PropertyRef Name="LineNo" />
+    </Key>
+    <Property Name="CompanyId" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="WareHouseId" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="OrderNo" Type="Int32" Nullable="false" />
+    <Property Name="LineNo" Type="Int32" Nullable="false" />
+    <Property Name="LineType" Type="Int16" />
+    <Property Name="StyleID" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="ColourID" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="SizeID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="UnitOfIssue" Type="Int32" />
+    <Property Name="TypeOfIssue" Type="Int32" />
+    <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Price" Type="Decimal" />
+    <Property Name="OrdQty" Type="Int32" />
+    <Property Name="AllQty" Type="Int32" />
+    <Property Name="InvQty" Type="Int32" />
+    <Property Name="DespQty" Type="Int32" />
+    <Property Name="CommissionRate" Type="Decimal" />
+    <Property Name="Discount" Type="Int32" />
+    <Property Name="VatCode" Type="Int16" />
+    <Property Name="NomCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Currency_Exchange_Rate" Type="Int32" />
+    <Property Name="SalesOrderNo" Type="Int32" />
+    <Property Name="SOLineNo" Type="Int32" />
+    <Property Name="DueDate" Type="DateTime" />
+    <Property Name="FreeTextType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FreeText" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+    <Property Name="OutStandingQty" Type="Int32" />
+    <Property Name="IssueUOM" Type="Int32" />
+    <Property Name="IssueQty" Type="Int32" />
+    <Property Name="StockingUOM" Type="Int32" />
+    <Property Name="OriginalLineNo" Type="Int32" />
+    <Property Name="JobSheetNo" Type="Int32" />
+    <Property Name="JobSheetLineNo" Type="Int32" />
+    <Property Name="AssemblyID" Type="Int32" />
+    <Property Name="AsmLineNo" Type="Int32" />
+    <NavigationProperty Name="tblpop_order_header" Relationship="e4konlinepop_newModel.tblpop_order_headertblpop_order_detail" FromRole="tblpop_order_detail" ToRole="tblpop_order_header" />
+  </EntityType>
+  <EntityType Name="tblpop_order_detail_reasons">
+    <Key>
+      <PropertyRef Name="CompanyId" />
+      <PropertyRef Name="WareHouseId" />
+      <PropertyRef Name="OrderNo" />
+      <PropertyRef Name="LineNo" />
+    </Key>
+    <Property Name="CompanyId" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="WareHouseId" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="OrderNo" Type="Int32" Nullable="false" />
+    <Property Name="LineNo" Type="Int32" Nullable="false" />
+    <Property Name="Reason" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="UserID" Type="Int32" />
+    <Property Name="LastUpdate" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tblpop_order_header">
+    <Key>
+      <PropertyRef Name="CompanyId" />
+      <PropertyRef Name="WareHouseId" />
+      <PropertyRef Name="OrderNo" />
+    </Key>
+    <Property Name="CompanyId" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="WareHouseId" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="OrderNo" Type="Int32" Nullable="false" />
+    <Property Name="SuppID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="OrderDate" Type="DateTime" />
+    <Property Name="InvDesc" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="InvAddress1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="InvAddress2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="InvAddress3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="InvCity" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="InvTown" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="InvPostCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="InvCountry" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DelDesc" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DelAddress1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DelAddress2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DelAddress3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DelCity" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DelTown" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DelPostCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DelCountry" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="OurRef" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="YourRef" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Comments" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+    <Property Name="DelDate" Type="DateTime" />
+    <Property Name="Carrier" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CarrierCharge" Type="Decimal" />
+    <Property Name="CustDisc" Type="Double" />
+    <Property Name="SettDisc" Type="Double" />
+    <Property Name="VolDisc" Type="Double" />
+    <Property Name="RepNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SettlementDays" Type="Int16" />
+    <Property Name="OrderConfirm" Type="Boolean" Nullable="false" />
+    <Property Name="CommentsExternal" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+    <Property Name="Printed" Type="Boolean" Nullable="false" />
+    <Property Name="SalesOrderNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Cancelled" Type="Boolean" Nullable="false" />
+    <Property Name="Completed" Type="Boolean" Nullable="false" />
+    <Property Name="CalendarPeriod" Type="Int32" />
+    <Property Name="Year" Type="Int32" />
+    <Property Name="Total" Type="Double" />
+    <Property Name="UserID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="OrderType" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="AllowAllocation" Type="Boolean" Nullable="false" />
+    <Property Name="ReqBOM" Type="Boolean" />
+    <Property Name="IsPrepaid" Type="Boolean" />
+    <Property Name="CustID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="CustRef" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="tblpop_order_detail" Relationship="e4konlinepop_newModel.tblpop_order_headertblpop_order_detail" FromRole="tblpop_order_header" ToRole="tblpop_order_detail" />
+    <NavigationProperty Name="tblpop_order_header_status" Relationship="e4konlinepop_newModel.tblpop_order_headertblpop_order_header_status" FromRole="tblpop_order_header" ToRole="tblpop_order_header_status" />
+  </EntityType>
+  <EntityType Name="tblpop_order_header_status">
+    <Key>
+      <PropertyRef Name="CompanyId" />
+      <PropertyRef Name="WareHouseId" />
+      <PropertyRef Name="OrderNo" />
+      <PropertyRef Name="StatusID" />
+    </Key>
+    <Property Name="CompanyId" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="WareHouseId" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="OrderNo" Type="Int32" Nullable="false" />
+    <Property Name="StatusID" Type="Int32" Nullable="false" />
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="LastUpdate" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="tblpop_customer_status" Relationship="e4konlinepop_newModel.tblpop_order_header_status_ibfk_4" FromRole="tblpop_order_header_status" ToRole="tblpop_customer_status" />
+    <NavigationProperty Name="tblpop_order_header" Relationship="e4konlinepop_newModel.tblpop_order_headertblpop_order_header_status" FromRole="tblpop_order_header_status" ToRole="tblpop_order_header" />
+  </EntityType>
+  <Association Name="tblpop_order_header_status_ibfk_4">
+    <End Type="e4konlinepop_newModel.tblpop_customer_status" Role="tblpop_customer_status" Multiplicity="1" />
+    <End Type="e4konlinepop_newModel.tblpop_order_header_status" Role="tblpop_order_header_status" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblpop_customer_status">
+        <PropertyRef Name="StatusID" />
+      </Principal>
+      <Dependent Role="tblpop_order_header_status">
+        <PropertyRef Name="StatusID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="tblpop_order_headertblpop_order_detail">
+    <End Type="e4konlinepop_newModel.tblpop_order_header" Role="tblpop_order_header" Multiplicity="1" />
+    <End Type="e4konlinepop_newModel.tblpop_order_detail" Role="tblpop_order_detail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblpop_order_header">
+        <PropertyRef Name="CompanyId" />
+        <PropertyRef Name="WareHouseId" />
+        <PropertyRef Name="OrderNo" />
+      </Principal>
+      <Dependent Role="tblpop_order_detail">
+        <PropertyRef Name="CompanyId" />
+        <PropertyRef Name="WareHouseId" />
+        <PropertyRef Name="OrderNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="tblpop_order_headertblpop_order_header_status">
+    <End Type="e4konlinepop_newModel.tblpop_order_header" Role="tblpop_order_header" Multiplicity="1" />
+    <End Type="e4konlinepop_newModel.tblpop_order_header_status" Role="tblpop_order_header_status" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblpop_order_header">
+        <PropertyRef Name="CompanyId" />
+        <PropertyRef Name="WareHouseId" />
+        <PropertyRef Name="OrderNo" />
+      </Principal>
+      <Dependent Role="tblpop_order_header_status">
+        <PropertyRef Name="CompanyId" />
+        <PropertyRef Name="WareHouseId" />
+        <PropertyRef Name="OrderNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
